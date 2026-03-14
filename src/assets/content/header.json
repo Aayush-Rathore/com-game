@@ -1,0 +1,47 @@
+{
+  "header": {
+    "logo": {
+      "text": "Com Game",
+      "url": "/",
+      "image": "/logo.svg",
+      "alt": "Com Game Logo",
+      "tagLine": "Play, Compete, Win!"
+    },
+    "navigation": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Games",
+        "url": "/come-games"
+      },
+      {
+        "name": "How to Play",
+        "url": "/download-come-games-app"
+      },
+      {
+        "name": "Rewards",
+        "url": "/real-money-come-games"
+      },
+      {
+        "name": "About",
+        "url": "/about"
+      },
+      {
+        "name": "FAQ",
+        "url": "/faq"
+      },
+      {
+        "name": "Contact",
+        "url": "/contact"
+      }
+    ],
+    "cta_buttons": [
+      {
+        "text": "Download App",
+        "url": "/download-come-games-app"
+      }
+    ]
+  }
+}

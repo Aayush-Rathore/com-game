@@ -1,0 +1,329 @@
+---
+import Layout from '../layouts/Layout.astro';
+import contentData from '../assets/content.json';
+
+const seoTitle = 'About Come Game - Independent Real Money Gaming Guide for India';
+const seoDescription =
+  'Learn about Come Game, the types of games offered on the platform, and how real money gaming works. Independent informational guide for Indian users.';
+const canonicalUrl = 'https://comegameapp.com/about';
+const ogImage = 'https://comegameapp.com/og-about-come-game.jpg';
+const keywordsMeta = contentData.keywords.slice(0, 80).join(', ');
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is Come Game?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Come Game is a mobile gaming platform that offers sports betting, casino-style games, card games, and slots through a mobile application.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is Come Game available in India?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The platform is accessed by many Indian users through Android devices. Availability may vary depending on regional laws and platform policies.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What types of games are available on Come Games?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The platform commonly includes sports betting, casino games, slots, mini games, and card games such as rummy.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is Come Game a guaranteed way to earn money?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Real money gaming platforms do not guarantee profits. All games involve financial risk and players can lose money.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Who can use Come Game?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Only adults aged 18 years and above should use real money gaming platforms and they should always play responsibly.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is Come Game Guide?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Come Game Guide is an independent informational website that explains how the platform works and provides guidance about responsible gaming.',
+      },
+    },
+  ],
+};
+---
+
+<Layout
+  title={seoTitle}
+  description={seoDescription}
+  keywords={keywordsMeta}
+  canonical={canonicalUrl}
+  ogImage={ogImage}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <article class="container mx-auto px-4 py-12 md:py-16">
+    <header class="max-w-4xl">
+      <p class="inline-flex rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-primary">
+        Independent Guide for India
+      </p>
+      <h1 class="mt-4 text-3xl font-black tracking-tight text-foreground md:text-5xl">
+        About Come Game - Independent Real Money Gaming Guide for India
+      </h1>
+      <p class="mt-5 text-base leading-7 text-muted-foreground md:text-lg">
+        Come Game is a real money gaming and sports betting platform designed for mobile users who want
+        quick access to online games, live sports markets, and casino-style entertainment.
+      </p>
+      <p class="mt-4 text-base leading-7 text-muted-foreground md:text-lg">
+        Through the Come Games mobile app, users can explore multiple game categories including sports
+        betting, card games, slots, and casino games. The platform focuses on providing a fast and simple
+        mobile experience for players.
+      </p>
+      <p class="mt-4 text-base leading-7 text-muted-foreground md:text-lg">
+        This website, <strong>Come Game Guide</strong>, is an independent informational and affiliate resource
+        that explains how the Come Game platform works and what users should know before downloading or playing.
+      </p>
+      <p class="mt-5 rounded-lg border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm leading-6 text-foreground">
+        Real money gaming involves financial risk. Users must be <strong>18 years or older</strong>.
+      </p>
+    </header>
+
+    <section class="mt-12 max-w-4xl">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">What is Come Game?</h2>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        Come Game is a mobile-focused gaming platform where players can access multiple entertainment
+        formats from a single application.
+      </p>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">Common features include:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-base leading-7 text-muted-foreground">
+        <li>Live sports betting markets</li>
+        <li>Casino-style games</li>
+        <li>Card games like rummy</li>
+        <li>Slots and mini games</li>
+        <li>Promotional bonus campaigns</li>
+      </ul>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        Players typically download the Android APK version of the platform from the official provider page.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-4xl">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Mission and Vision of Come Game</h2>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        The platform positions itself as a mobile-first entertainment experience for online gaming fans.
+      </p>
+
+      <h3 class="mt-6 text-xl font-bold text-foreground">Mission</h3>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-base leading-7 text-muted-foreground">
+        <li>Provide easy access to sports and casino games</li>
+        <li>Deliver a smooth mobile gaming experience</li>
+        <li>Offer multiple gaming formats inside one platform</li>
+        <li>Support secure payment methods for deposits and withdrawals</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-bold text-foreground">Vision</h3>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-base leading-7 text-muted-foreground">
+        <li>Build a large community of mobile gaming users</li>
+        <li>Improve gaming accessibility across India</li>
+        <li>Deliver fast gameplay and simple user experience</li>
+      </ul>
+    </section>
+
+    <section class="mt-12 max-w-4xl">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Types of Games Available on Come Games</h2>
+
+      <h3 class="mt-6 text-xl font-bold text-foreground">1. Sports Betting</h3>
+      <p class="mt-3 text-base leading-7 text-muted-foreground">
+        Users can follow live sporting events and place predictions on match outcomes.
+      </p>
+      <p class="mt-3 text-base leading-7 text-muted-foreground">Common sports include:</p>
+      <ul class="mt-3 list-disc space-y-2 pl-6 text-base leading-7 text-muted-foreground">
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Basketball</li>
+        <li>Tennis</li>
+      </ul>
+      <p class="mt-3 text-base leading-7 text-muted-foreground">
+        Markets may include match results, totals, and live betting options.
+      </p>
+
+      <h3 class="mt-6 text-xl font-bold text-foreground">2. Casino Games</h3>
+      <p class="mt-3 text-base leading-7 text-muted-foreground">Casino-style games are also commonly available.</p>
+      <p class="mt-3 text-base leading-7 text-muted-foreground">Examples include:</p>
+      <ul class="mt-3 list-disc space-y-2 pl-6 text-base leading-7 text-muted-foreground">
+        <li>Blackjack</li>
+        <li>Roulette</li>
+        <li>Andar Bahar</li>
+        <li>Live dealer games</li>
+      </ul>
+      <p class="mt-3 text-base leading-7 text-muted-foreground">
+        These games are based on chance and outcomes are not guaranteed.
+      </p>
+
+      <h3 class="mt-6 text-xl font-bold text-foreground">3. Slots and Mini Games</h3>
+      <p class="mt-3 text-base leading-7 text-muted-foreground">
+        Slots and short session mini games are designed for quick entertainment.
+      </p>
+      <p class="mt-3 text-base leading-7 text-muted-foreground">Features may include:</p>
+      <ul class="mt-3 list-disc space-y-2 pl-6 text-base leading-7 text-muted-foreground">
+        <li>Bonus rounds</li>
+        <li>Multipliers</li>
+        <li>Jackpot rewards</li>
+        <li>Fast gameplay</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-bold text-foreground">4. Rummy and Card Games</h3>
+      <p class="mt-3 text-base leading-7 text-muted-foreground">
+        Skill-based card games such as rummy are also popular on the platform.
+      </p>
+      <p class="mt-3 text-base leading-7 text-muted-foreground">
+        These games require strategy, experience, and understanding of the rules.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-4xl">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">User Experience</h2>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        Come Game is typically designed as a lightweight Android application.
+      </p>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">The interface usually includes:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-base leading-7 text-muted-foreground">
+        <li>Simple navigation menus</li>
+        <li>A dashboard showing live games</li>
+        <li>Featured promotions</li>
+        <li>Wallet balance and payment options</li>
+      </ul>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        The mobile-first design allows users to play on mid-range Android devices.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-4xl rounded-xl border border-destructive/40 bg-destructive/10 p-5">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Responsible Gaming</h2>
+      <p class="mt-4 text-base leading-7 text-foreground">
+        Real money gaming should always be treated as <strong>entertainment</strong>, not as a guaranteed way
+        to earn income.
+      </p>
+      <p class="mt-4 text-base leading-7 text-foreground">Responsible gaming practices include:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-base leading-7 text-foreground">
+        <li>Only deposit money you can afford to lose</li>
+        <li>Set limits on time and spending</li>
+        <li>Avoid chasing losses</li>
+        <li>Take regular breaks</li>
+        <li>Stop playing if gaming becomes stressful</li>
+      </ul>
+      <p class="mt-4 text-base leading-7 text-foreground">
+        Users under <strong>18 years old should not participate in real money gaming</strong>.
+      </p>
+      <p class="mt-4 text-base leading-7 text-foreground">
+        Read our
+        <a href="/responsible-gaming" class="text-primary underline-offset-4 hover:underline">responsible gaming guide with practical risk-control advice</a>.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-4xl">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Why People Search for Come Games</h2>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        Many players search for Come Game online because the platform offers:
+      </p>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-base leading-7 text-muted-foreground">
+        <li>Multiple games inside one app</li>
+        <li>Sports betting and casino games</li>
+        <li>Mobile-friendly gameplay</li>
+        <li>Regular promotional campaigns</li>
+      </ul>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        However, users should always research the platform and understand the risks before playing.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-4xl">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Conclusion</h2>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        Come Game combines sports betting, casino games, card games, and mini games into one mobile
+        platform for entertainment.
+      </p>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        Come Game Guide exists to provide independent information about the platform, including how the
+        app works, what types of games are available, and how players can approach gaming responsibly.
+      </p>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        Before using any real money gaming platform, always review the rules, understand the risks,
+        and play responsibly.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-4xl rounded-xl border border-border bg-card p-5">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Frequently Asked Questions</h2>
+      <div class="mt-6 space-y-4">
+        <details class="rounded-xl border border-border bg-background/60 p-4">
+          <summary class="cursor-pointer font-semibold text-foreground">What is Come Game?</summary>
+          <p class="mt-3 text-sm leading-7 text-muted-foreground">
+            Come Game is a mobile gaming platform that offers sports betting, casino-style games, card games,
+            and slots through a mobile application.
+          </p>
+        </details>
+        <details class="rounded-xl border border-border bg-background/60 p-4">
+          <summary class="cursor-pointer font-semibold text-foreground">Is Come Game available in India?</summary>
+          <p class="mt-3 text-sm leading-7 text-muted-foreground">
+            The platform is accessed by many Indian users through Android devices. Availability may vary
+            depending on regional laws and platform policies.
+          </p>
+        </details>
+        <details class="rounded-xl border border-border bg-background/60 p-4">
+          <summary class="cursor-pointer font-semibold text-foreground">What types of games are available on Come Games?</summary>
+          <p class="mt-3 text-sm leading-7 text-muted-foreground">
+            The platform commonly includes sports betting, casino games, slots, mini games, and card games such as rummy.
+          </p>
+        </details>
+        <details class="rounded-xl border border-border bg-background/60 p-4">
+          <summary class="cursor-pointer font-semibold text-foreground">Is Come Game a guaranteed way to earn money?</summary>
+          <p class="mt-3 text-sm leading-7 text-muted-foreground">
+            No. Real money gaming platforms do not guarantee profits. All games involve financial risk and players can lose money.
+          </p>
+        </details>
+        <details class="rounded-xl border border-border bg-background/60 p-4">
+          <summary class="cursor-pointer font-semibold text-foreground">Who can use Come Game?</summary>
+          <p class="mt-3 text-sm leading-7 text-muted-foreground">
+            Only adults aged 18 years and above should use real money gaming platforms and they should always play responsibly.
+          </p>
+        </details>
+        <details class="rounded-xl border border-border bg-background/60 p-4">
+          <summary class="cursor-pointer font-semibold text-foreground">What is Come Game Guide?</summary>
+          <p class="mt-3 text-sm leading-7 text-muted-foreground">
+            Come Game Guide is an independent informational website that explains how the platform works and provides guidance about responsible gaming.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mt-12 max-w-4xl rounded-xl border border-border bg-card p-5">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Explore More Guides</h2>
+      <ul class="mt-5 space-y-2 text-base leading-7 text-muted-foreground">
+        <li>
+          <a href="/come-games" class="text-primary underline-offset-4 hover:underline">Explore complete Come Games categories and game types</a>
+        </li>
+        <li>
+          <a href="/download-come-games-app" class="text-primary underline-offset-4 hover:underline">Read the full Come Game app download and installation guide</a>
+        </li>
+        <li>
+          <a href="/real-money-come-games" class="text-primary underline-offset-4 hover:underline">Understand real money Come Game deposits and withdrawals</a>
+        </li>
+      </ul>
+    </section>
+  </article>
+</Layout>

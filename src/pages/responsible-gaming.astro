@@ -1,0 +1,225 @@
+---
+import Layout from '../layouts/Layout.astro';
+import contentData from '../assets/content.json';
+
+const keywordsMeta = contentData.keywords.slice(0, 80).join(', ');
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Responsible Gaming – Come Game Guide",
+  "description": "Guidelines and information about responsible gaming practices and understanding risks associated with real-money gaming.",
+  "url": "https://comegameapp.com/responsible-gaming",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Come Game Guide",
+    "url": "https://comegameapp.com"
+  }
+};
+---
+
+<Layout
+  title="Responsible Gaming – Safe Play Guidelines | Come Game Guide"
+  description="Learn responsible gaming practices, understand risks of real-money gaming, and find guidance for safe and controlled gameplay."
+  keywords={keywordsMeta}
+  canonical="https://comegameapp.com/responsible-gaming"
+  ogImage="/og-responsible-gaming.jpg"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)}></script>
+  </Fragment>
+
+  <main class="max-w-3xl mx-auto px-4 py-12 text-gray-800">
+
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Responsible Gaming</h1>
+    <p class="text-sm text-gray-500 mb-8">Last updated: January 2026</p>
+
+    <p class="mb-4">
+      Come Game Guide promotes <strong>responsible and informed gaming</strong>. Real-money gaming
+      platforms can provide entertainment, but they also involve financial risk.
+    </p>
+    <p class="mb-6">
+      This page provides guidance to help users understand the risks and maintain control when
+      engaging with real-money gaming platforms.
+    </p>
+
+    <div class="bg-blue-50 border-l-4 border-blue-400 rounded-lg px-5 py-4 mb-10 text-gray-700">
+      Come Game Guide is an <strong>independent informational website</strong> and does not operate
+      any gaming platform.
+    </div>
+
+    <hr class="border-gray-200 mb-10" />
+
+    <!-- Understanding Real-Money Gaming -->
+    <section class="mb-10" aria-labelledby="understanding">
+      <h2 id="understanding" class="text-2xl font-semibold text-gray-900 mb-4">Understanding Real-Money Gaming</h2>
+      <p class="mb-4">
+        Real-money gaming involves placing money on the outcome of games or betting markets.
+        Possible outcomes include:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+        <li>Winning money</li>
+        <li>Losing money</li>
+        <li>Unpredictable results</li>
+      </ul>
+      <p class="text-gray-700">
+        Because outcomes may depend on chance or other factors, real-money gaming should always be
+        treated as <strong>entertainment rather than a source of income</strong>.
+      </p>
+    </section>
+
+    <!-- Set Personal Limits -->
+    <section class="mb-10" aria-labelledby="set-limits">
+      <h2 id="set-limits" class="text-2xl font-semibold text-gray-900 mb-4">Set Personal Limits</h2>
+      <p class="mb-4">
+        One of the most important principles of responsible gaming is setting limits.
+        Players should consider:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+        <li>Setting a spending limit before playing</li>
+        <li>Deciding how much time to spend on gaming</li>
+        <li>Stopping when limits are reached</li>
+      </ul>
+      <p class="text-gray-700">
+        Setting limits helps prevent gaming from becoming harmful.
+      </p>
+    </section>
+
+    <!-- Never Chase Losses -->
+    <section class="mb-10 bg-red-50 border border-red-200 rounded-lg p-6" aria-labelledby="chase-losses">
+      <h2 id="chase-losses" class="text-2xl font-semibold text-gray-900 mb-4">Never Chase Losses</h2>
+      <p class="mb-4 text-gray-700">
+        A common mistake among players is trying to recover losses by continuing to play.
+        Chasing losses can lead to:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+        <li>Higher financial risk</li>
+        <li>Emotional stress</li>
+        <li>Loss of control over spending</li>
+      </ul>
+      <p class="text-gray-700">
+        If you experience losses, it is often best to <strong>stop playing and take a break</strong>.
+      </p>
+    </section>
+
+    <!-- Play for Entertainment -->
+    <section class="mb-10" aria-labelledby="entertainment">
+      <h2 id="entertainment" class="text-2xl font-semibold text-gray-900 mb-4">Play for Entertainment</h2>
+      <p class="mb-4">
+        Real-money gaming should always be viewed as a form of entertainment. Important reminders:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li>No platform can guarantee winnings</li>
+        <li>Losing money is always possible</li>
+        <li>Gaming should never be treated as a way to solve financial problems</li>
+      </ul>
+    </section>
+
+    <!-- Take Regular Breaks -->
+    <section class="mb-10" aria-labelledby="breaks">
+      <h2 id="breaks" class="text-2xl font-semibold text-gray-900 mb-4">Take Regular Breaks</h2>
+      <p class="mb-4">
+        Long gaming sessions can reduce awareness of time and spending. Players should:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li>Take regular breaks</li>
+        <li>Avoid playing for extended periods</li>
+        <li>Balance gaming with other activities</li>
+      </ul>
+    </section>
+
+    <!-- Recognizing Problem Gambling -->
+    <section class="mb-10 bg-yellow-50 border border-yellow-200 rounded-lg p-6" aria-labelledby="problem-gambling">
+      <h2 id="problem-gambling" class="text-2xl font-semibold text-gray-900 mb-4">Recognizing Problem Gambling</h2>
+      <p class="mb-4 text-gray-700">
+        Some warning signs of problematic gaming behavior include:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+        <li>Spending more money than planned</li>
+        <li>Hiding gaming activity from family or friends</li>
+        <li>Borrowing money to continue playing</li>
+        <li>Feeling stressed or anxious about gaming</li>
+      </ul>
+      <p class="text-gray-700">
+        If these signs appear, it may be helpful to seek professional support.
+      </p>
+    </section>
+
+    <!-- Support Resources -->
+    <section class="mb-10" aria-labelledby="support">
+      <h2 id="support" class="text-2xl font-semibold text-gray-900 mb-4">Support Resources</h2>
+      <p class="mb-4">
+        If you feel that gaming is becoming difficult to control, consider contacting support
+        organizations that provide help for gambling-related issues.
+      </p>
+      <p class="mb-4 text-gray-700">
+        These organizations offer confidential assistance and guidance.
+      </p>
+      <p class="text-gray-700">
+        Users should search for <strong>local responsible gaming support services</strong> available
+        in their region.
+      </p>
+    </section>
+
+    <!-- Age Restrictions -->
+    <section class="mb-10" aria-labelledby="age">
+      <h2 id="age" class="text-2xl font-semibold text-gray-900 mb-4">Age Restrictions</h2>
+      <p class="mb-4">
+        Real-money gaming platforms are intended only for users <strong>18 years of age or older</strong>.
+      </p>
+      <p class="text-gray-700">
+        Minors should never participate in betting or real-money gaming activities.
+      </p>
+    </section>
+
+    <!-- Our Commitment -->
+    <section class="mb-10" aria-labelledby="commitment">
+      <h2 id="commitment" class="text-2xl font-semibold text-gray-900 mb-4">Our Commitment</h2>
+      <p class="mb-4">
+        Come Game Guide aims to provide <strong>transparent and responsible information</strong>
+        about real-money gaming platforms. Our goal is to help users understand:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+        <li>How gaming platforms work</li>
+        <li>The risks involved</li>
+        <li>The importance of responsible gaming practices</li>
+      </ul>
+      <p class="text-gray-700">
+        Read our full guide on
+        <a href="/real-money-come-games" class="text-blue-600 hover:underline" aria-label="Learn about real-money Come Games">real-money Come Games</a>
+        to understand platform mechanics before playing.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="mb-10" aria-labelledby="contact">
+      <h2 id="contact" class="text-2xl font-semibold text-gray-900 mb-4">Contact Us</h2>
+      <p class="mb-4 text-gray-700">
+        If you have questions about responsible gaming or our website content, you can contact us:
+      </p>
+      <p class="mb-4">
+        <strong>Email:</strong>
+        <a
+          href="mailto:contact@comegameapp.com"
+          class="text-blue-600 hover:underline ml-1"
+          aria-label="Email Come Game Guide at contact@comegameapp.com"
+        >
+          contact@comegameapp.com
+        </a>
+      </p>
+      <p class="text-gray-700">
+        You can also visit our
+        <a href="/contact" class="text-blue-600 hover:underline" aria-label="Go to Come Game Guide contact page">Contact page</a>
+        for more ways to reach us.
+      </p>
+    </section>
+
+    <hr class="border-gray-200 mb-8" />
+
+    <p class="text-sm text-gray-500 text-center">
+      Come Game Guide is an independent informational website. We are not affiliated with any gaming operator.
+      <a href="/about" class="text-blue-600 hover:underline ml-1" aria-label="Learn more about Come Game Guide">Learn about us</a>.
+    </p>
+
+  </main>
+</Layout>

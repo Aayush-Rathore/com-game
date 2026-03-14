@@ -1,0 +1,205 @@
+---
+import Layout from '../layouts/Layout.astro';
+import contentData from '../assets/content.json';
+
+const keywordsMeta = contentData.keywords.slice(0, 80).join(', ');
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms and Conditions – Come Game Guide",
+  "description": "Terms and conditions governing the use of the Come Game Guide website and its informational content.",
+  "url": "https://comegameapp.com/terms-and-conditions",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Come Game Guide",
+    "url": "https://comegameapp.com"
+  }
+};
+---
+
+<Layout
+  title="Terms and Conditions – Come Game Guide"
+  description="Terms and conditions governing the use of the Come Game Guide website and its informational content."
+  keywords={keywordsMeta}
+  canonical="https://comegameapp.com/terms-and-conditions"
+  ogImage="/og-terms-and-conditions.jpg"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)}></script>
+  </Fragment>
+
+  <main class="max-w-3xl mx-auto px-4 py-12 text-gray-800">
+
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Terms and Conditions</h1>
+    <p class="text-sm text-gray-500 mb-8">Last updated: January 2026</p>
+
+    <p class="mb-4">
+      Welcome to <strong>Come Game Guide</strong>. By accessing and using this website, you agree
+      to the following Terms and Conditions. If you do not agree with these terms, please
+      discontinue use of the website.
+    </p>
+    <p class="mb-4">
+      Come Game Guide is an <strong>independent informational website</strong> that provides guides
+      and educational content related to the Come Game platform and real-money gaming topics.
+    </p>
+    <p class="mb-10">
+      We do <strong>not operate gaming platforms</strong>, hold player funds, or manage user accounts.
+    </p>
+
+    <hr class="border-gray-200 mb-10" />
+
+    <!-- Use of the Website -->
+    <section class="mb-10" aria-labelledby="use-website">
+      <h2 id="use-website" class="text-2xl font-semibold text-gray-900 mb-4">Use of the Website</h2>
+      <p class="mb-4">By using this website, you agree that:</p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li>You are at least <strong>18 years old</strong></li>
+        <li>You will use the website for informational purposes only</li>
+        <li>You will not misuse or attempt to disrupt website services</li>
+        <li>You understand that the website does not provide financial or legal advice</li>
+      </ul>
+    </section>
+
+    <!-- Independent Information -->
+    <section class="mb-10" aria-labelledby="independent-info">
+      <h2 id="independent-info" class="text-2xl font-semibold text-gray-900 mb-4">Independent Information</h2>
+      <p class="mb-4">
+        All content published on Come Game Guide is provided for <strong>informational and
+        educational purposes only</strong>.
+      </p>
+      <p class="mb-3 text-gray-700">We do not:</p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+        <li>Operate or manage Come Game or any gaming platform</li>
+        <li>Process deposits or withdrawals</li>
+        <li>Provide customer support for external gaming services</li>
+      </ul>
+      <p class="text-gray-700">
+        Users must contact the official platform directly for account or payment issues.
+      </p>
+    </section>
+
+    <!-- Accuracy of Information -->
+    <section class="mb-10" aria-labelledby="accuracy">
+      <h2 id="accuracy" class="text-2xl font-semibold text-gray-900 mb-4">Accuracy of Information</h2>
+      <p class="mb-4">We aim to keep information accurate and updated. However:</p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+        <li>Platform features may change</li>
+        <li>Promotions and bonuses may vary</li>
+        <li>Rules and availability may differ by region</li>
+      </ul>
+      <p class="mb-3 text-gray-700">
+        We cannot guarantee that all information will always be completely current.
+      </p>
+      <p class="text-gray-700">
+        Users should verify details directly with the official platform.
+      </p>
+    </section>
+
+    <!-- External Links -->
+    <section class="mb-10" aria-labelledby="external-links">
+      <h2 id="external-links" class="text-2xl font-semibold text-gray-900 mb-4">External Links</h2>
+      <p class="mb-4">
+        This website may contain links to third-party websites, provided for informational
+        purposes only. We do not control or take responsibility for:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+        <li>External website content</li>
+        <li>Third-party policies</li>
+        <li>Services offered by external platforms</li>
+      </ul>
+      <p class="text-gray-700">
+        Users should review the policies of any external website they visit.
+      </p>
+    </section>
+
+    <!-- Affiliate Disclosure -->
+    <section class="mb-10" aria-labelledby="affiliate">
+      <h2 id="affiliate" class="text-2xl font-semibold text-gray-900 mb-4">Affiliate Disclosure</h2>
+      <p class="mb-4">
+        Some links on Come Game Guide may be affiliate links. If users click these links and sign
+        up on external platforms, we may receive a commission at no extra cost to the user.
+      </p>
+      <p class="text-gray-700">
+        Affiliate partnerships do <strong>not influence our editorial content</strong>.
+      </p>
+    </section>
+
+    <!-- Responsible Gaming -->
+    <section class="mb-10 bg-yellow-50 border border-yellow-200 rounded-lg p-6" aria-labelledby="responsible-gaming">
+      <h2 id="responsible-gaming" class="text-2xl font-semibold text-gray-900 mb-4">Responsible Gaming</h2>
+      <p class="mb-4 text-gray-700">
+        The content on this website discusses real-money gaming platforms. Real-money gaming
+        involves financial risk and should only be used for entertainment purposes.
+      </p>
+      <p class="mb-3 text-gray-700">Users should:</p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+        <li>Play responsibly</li>
+        <li>Set spending limits</li>
+        <li>Avoid chasing losses</li>
+        <li>Comply with local laws</li>
+      </ul>
+      <p>
+        <a href="/responsible-gaming" class="text-blue-600 hover:underline" aria-label="Read Come Game Guide responsible gaming tips">
+          Read our Responsible Gaming guide →
+        </a>
+      </p>
+    </section>
+
+    <!-- Limitation of Liability -->
+    <section class="mb-10" aria-labelledby="liability">
+      <h2 id="liability" class="text-2xl font-semibold text-gray-900 mb-4">Limitation of Liability</h2>
+      <p class="mb-4">
+        Come Game Guide and its operators will not be held liable for:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+        <li>Financial losses related to gaming activities</li>
+        <li>Decisions made based on website content</li>
+        <li>Issues with external platforms or services</li>
+      </ul>
+      <p class="text-gray-700">
+        Users access and use third-party platforms at their own risk.
+      </p>
+    </section>
+
+    <!-- Changes to Terms -->
+    <section class="mb-10" aria-labelledby="changes">
+      <h2 id="changes" class="text-2xl font-semibold text-gray-900 mb-4">Changes to These Terms</h2>
+      <p class="text-gray-700">
+        We may update these Terms and Conditions from time to time. Updated versions will be
+        published on this page with the latest revision date.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="mb-10" aria-labelledby="contact">
+      <h2 id="contact" class="text-2xl font-semibold text-gray-900 mb-4">Contact Information</h2>
+      <p class="mb-4 text-gray-700">
+        If you have questions about these Terms and Conditions, you can contact us:
+      </p>
+      <p class="mb-4">
+        <strong>Email:</strong>
+        <a
+          href="mailto:contact@comegameapp.com"
+          class="text-blue-600 hover:underline ml-1"
+          aria-label="Email Come Game Guide at contact@comegameapp.com"
+        >
+          contact@comegameapp.com
+        </a>
+      </p>
+      <p class="text-gray-700">
+        You can also visit our
+        <a href="/contact" class="text-blue-600 hover:underline" aria-label="Go to Come Game Guide contact page">Contact page</a>
+        for additional ways to reach us.
+      </p>
+    </section>
+
+    <hr class="border-gray-200 mb-8" />
+
+    <p class="text-sm text-gray-500 text-center">
+      Come Game Guide is an independent informational website. We are not affiliated with any gaming operator.
+      <a href="/about" class="text-blue-600 hover:underline ml-1" aria-label="Learn more about Come Game Guide">Learn about us</a>.
+    </p>
+
+  </main>
+</Layout>

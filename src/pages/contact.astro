@@ -1,0 +1,164 @@
+---
+import Layout from '../layouts/Layout.astro';
+import contentData from '../assets/content.json';
+
+const seoTitle = 'Contact Us - Come Game Guide';
+const seoDescription =
+  'Contact Come Game Guide for questions, feedback, or partnership inquiries related to Come Game and real money gaming guides.';
+const canonicalUrl = 'https://comegameapp.com/contact';
+const ogImage = 'https://comegameapp.com/og-contact-come-game-guide.jpg';
+const keywordsMeta = contentData.keywords.slice(0, 80).join(', ');
+
+const contactPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact Come Game Guide',
+  url: canonicalUrl,
+  description:
+    'Contact page for Come Game Guide where users can reach the team for questions, feedback, or partnership inquiries.',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Come Game Guide',
+    url: 'https://comegameapp.com',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer support',
+    email: 'contact@comegameapp.com',
+    availableLanguage: ['English'],
+  },
+};
+---
+
+<Layout
+  title={seoTitle}
+  description={seoDescription}
+  keywords={keywordsMeta}
+  canonical={canonicalUrl}
+  ogImage={ogImage}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(contactPageSchema)}></script>
+  </Fragment>
+
+  <article class="container mx-auto px-4 py-12 md:py-16">
+    <header class="max-w-4xl">
+      <p class="inline-flex rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-primary">
+        Contact and Support
+      </p>
+      <h1 class="mt-4 text-3xl font-black tracking-tight text-foreground md:text-5xl">
+        Contact Come Game Guide
+      </h1>
+      <p class="mt-5 text-base leading-7 text-muted-foreground md:text-lg">
+        If you have questions about our guides, feedback about our content, or need to report an issue,
+        you can contact the <strong>Come Game Guide team</strong> directly.
+      </p>
+      <p class="mt-4 text-base leading-7 text-muted-foreground md:text-lg">
+        We aim to provide clear and helpful information about the Come Game platform and real money
+        gaming topics for Indian users.
+      </p>
+    </header>
+
+    <section class="mt-12 max-w-4xl rounded-xl border border-border bg-card p-5">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Email Support</h2>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        The easiest way to reach us is through email.
+      </p>
+      <p class="mt-4 text-base leading-7 text-foreground">
+        <strong>Email:</strong>
+        <a href="mailto:contact@comegameapp.com" class="text-primary underline-offset-4 hover:underline">
+          contact@comegameapp.com
+        </a>
+      </p>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">You can contact us for:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-base leading-7 text-muted-foreground">
+        <li>General questions about our guides</li>
+        <li>Reporting incorrect information</li>
+        <li>Website feedback or suggestions</li>
+        <li>Partnership or collaboration inquiries</li>
+        <li>Technical issues on the website</li>
+      </ul>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        Our team usually responds within <strong>24-48 hours</strong> depending on the request volume.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-4xl rounded-xl border border-destructive/40 bg-destructive/10 p-5">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Important Notice</h2>
+      <p class="mt-4 text-base leading-7 text-foreground">
+        Come Game Guide is an <strong>independent informational website</strong>.
+      </p>
+      <p class="mt-4 text-base leading-7 text-foreground">We do <strong>not</strong>:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-base leading-7 text-foreground">
+        <li>Operate Come Game</li>
+        <li>Manage player accounts</li>
+        <li>Process deposits or withdrawals</li>
+        <li>Provide customer support for the gaming platform</li>
+      </ul>
+      <p class="mt-4 text-base leading-7 text-foreground">
+        If you need help with your <strong>Come Game account, payments, or login issues</strong>, please
+        contact the official platform support through their website or application.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-4xl">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Responsible Gaming Reminder</h2>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        Real money gaming involves financial risk and should always be treated as entertainment.
+      </p>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">Please remember:</p>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-base leading-7 text-muted-foreground">
+        <li>Only play if you are <strong>18 years or older</strong></li>
+        <li>Never play with money you cannot afford to lose</li>
+        <li>Take breaks and play responsibly</li>
+      </ul>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        For more information, please visit our
+        <a href="/responsible-gaming" class="text-primary underline-offset-4 hover:underline">
+          responsible gaming safety and support page
+        </a>.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-4xl rounded-xl border border-border bg-card p-5">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Business and Media Inquiries</h2>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        For partnerships, content collaborations, or media inquiries, please email:
+      </p>
+      <p class="mt-4 text-base leading-7 text-foreground">
+        <a href="mailto:contact@comegameapp.com" class="text-primary underline-offset-4 hover:underline">
+          contact@comegameapp.com
+        </a>
+      </p>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        Please include clear details about your request so we can respond quickly.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-4xl">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Thank You</h2>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        Thank you for visiting <strong>Come Game Guide</strong>.
+      </p>
+      <p class="mt-4 text-base leading-7 text-muted-foreground">
+        We appreciate feedback from our readers because it helps us improve our guides and provide better
+        information for the community.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-4xl rounded-xl border border-border bg-card p-5">
+      <h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Explore More Guides</h2>
+      <ul class="mt-5 space-y-2 text-base leading-7 text-muted-foreground">
+        <li>
+          <a href="/come-games" class="text-primary underline-offset-4 hover:underline">Explore the complete Come Games list and categories</a>
+        </li>
+        <li>
+          <a href="/download-come-games-app" class="text-primary underline-offset-4 hover:underline">Read the full Come Game app download and setup guide</a>
+        </li>
+        <li>
+          <a href="/about" class="text-primary underline-offset-4 hover:underline">Learn about Come Game Guide editorial and affiliate policy</a>
+        </li>
+      </ul>
+    </section>
+  </article>
+</Layout>

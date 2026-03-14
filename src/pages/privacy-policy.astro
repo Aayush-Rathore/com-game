@@ -1,0 +1,210 @@
+---
+import Layout from '../layouts/Layout.astro';
+import contentData from '../assets/content.json';
+
+const keywordsMeta = contentData.keywords.slice(0, 80).join(', ');
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy – Come Game Guide",
+  "description": "Learn how Come Game Guide collects, uses and protects visitor information when using our website.",
+  "url": "https://comegameapp.com/privacy-policy",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Come Game Guide",
+    "url": "https://comegameapp.com"
+  }
+};
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Come Game Guide",
+  "url": "https://comegameapp.com",
+  "email": "contact@comegameapp.com"
+};
+---
+
+<Layout
+  title="Privacy Policy – Come Game Guide"
+  description="Learn how Come Game Guide collects, uses and protects visitor information when using our website."
+  keywords={keywordsMeta}
+  canonical="https://comegameapp.com/privacy-policy"
+  ogImage="/og-privacy-policy.jpg"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)}></script>
+  </Fragment>
+
+  <main class="max-w-3xl mx-auto px-4 py-12 text-gray-800">
+
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
+    <p class="text-sm text-gray-500 mb-8">Last updated: January 2026</p>
+
+    <p class="mb-4">
+      Welcome to <strong>Come Game Guide</strong>. This Privacy Policy explains how information may
+      be collected, used, and protected when you visit our website.
+    </p>
+    <p class="mb-4">
+      Come Game Guide is an <strong>independent informational website</strong> that provides guides
+      about the Come Game platform and similar real-money gaming topics. We do not operate gaming
+      services and we do not manage player accounts or payments.
+    </p>
+    <p class="mb-10">
+      By using this website, you agree to the practices described in this Privacy Policy.
+    </p>
+
+    <hr class="border-gray-200 mb-10" />
+
+    <!-- Information We Collect -->
+    <section class="mb-10" aria-labelledby="info-collect">
+      <h2 id="info-collect" class="text-2xl font-semibold text-gray-900 mb-4">Information We Collect</h2>
+      <p class="mb-4">
+        When visitors access our website, certain information may be collected automatically
+        through analytics or server logs. This information may include:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li>IP address</li>
+        <li>Browser type</li>
+        <li>Device type</li>
+        <li>Pages visited</li>
+        <li>Referring website</li>
+        <li>Date and time of visit</li>
+      </ul>
+      <p class="mt-4 text-gray-700">
+        This data helps us understand how visitors use the website and improve our content.
+      </p>
+    </section>
+
+    <!-- Cookies -->
+    <section class="mb-10" aria-labelledby="cookies">
+      <h2 id="cookies" class="text-2xl font-semibold text-gray-900 mb-4">Cookies</h2>
+      <p class="mb-4">
+        Our website may use cookies to enhance the browsing experience. Cookies may be used for
+        purposes such as:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li>Analyzing website traffic</li>
+        <li>Improving site performance</li>
+        <li>Remembering user preferences</li>
+      </ul>
+      <p class="mt-4 text-gray-700">
+        Users can disable cookies through their browser settings if they prefer not to allow them.
+      </p>
+    </section>
+
+    <!-- Third-Party Links -->
+    <section class="mb-10" aria-labelledby="third-party">
+      <h2 id="third-party" class="text-2xl font-semibold text-gray-900 mb-4">Third-Party Links</h2>
+      <p class="mb-4">
+        Our website may contain links to third-party websites including gaming platforms or
+        affiliate partners. Please note:
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+        <li>We do not control these external websites</li>
+        <li>Their privacy policies may differ from ours</li>
+        <li>Users should review their policies before sharing personal information</li>
+      </ul>
+      <p class="text-gray-700">
+        Come Game Guide is not responsible for the practices of external websites.
+      </p>
+    </section>
+
+    <!-- Affiliate Disclosure -->
+    <section class="mb-10" aria-labelledby="affiliate">
+      <h2 id="affiliate" class="text-2xl font-semibold text-gray-900 mb-4">Affiliate Disclosure</h2>
+      <p class="mb-4">
+        Some links on this website may be affiliate links. If users click these links and sign up
+        on external platforms, we may receive a commission at no additional cost to the user.
+      </p>
+      <p class="text-gray-700">
+        These partnerships help support the operation of this website, but they do not influence
+        our editorial content.
+      </p>
+    </section>
+
+    <!-- Data Protection -->
+    <section class="mb-10" aria-labelledby="data-protection">
+      <h2 id="data-protection" class="text-2xl font-semibold text-gray-900 mb-4">Data Protection</h2>
+      <p class="mb-4">
+        We take reasonable measures to protect website data and maintain secure systems.
+      </p>
+      <p class="text-gray-700">
+        However, no method of internet transmission or electronic storage can be guaranteed to be
+        completely secure. Users should always take precautions when sharing personal information online.
+      </p>
+    </section>
+
+    <!-- Children's Information -->
+    <section class="mb-10" aria-labelledby="children">
+      <h2 id="children" class="text-2xl font-semibold text-gray-900 mb-4">Children's Information</h2>
+      <p class="mb-4">
+        This website is intended only for users <strong>18 years of age or older</strong>.
+      </p>
+      <p class="mb-4 text-gray-700">
+        We do not knowingly collect personal information from children under the age of 18.
+      </p>
+      <p class="text-gray-700">
+        If you believe a minor has provided information on this website, please
+        <a href="/contact" class="text-blue-600 hover:underline" aria-label="Contact Come Game Guide support team">contact us</a>
+        so we can remove the information.
+      </p>
+    </section>
+
+    <!-- Responsible Gaming -->
+    <section class="mb-10 bg-yellow-50 border border-yellow-200 rounded-lg p-6" aria-labelledby="responsible-gaming">
+      <h2 id="responsible-gaming" class="text-2xl font-semibold text-gray-900 mb-4">Responsible Gaming Notice</h2>
+      <p class="mb-4 text-gray-700">
+        The information provided on this website relates to real-money gaming platforms.
+        Real-money gaming involves financial risk and should only be used for entertainment purposes.
+      </p>
+      <p class="text-gray-700">
+        Users should always play responsibly and follow local laws in their region. Visit our
+        <a href="/responsible-gaming" class="text-blue-600 hover:underline" aria-label="Read Come Game Guide responsible gaming tips">Responsible Gaming guide</a>
+        for more information.
+      </p>
+    </section>
+
+    <!-- Changes to Policy -->
+    <section class="mb-10" aria-labelledby="changes">
+      <h2 id="changes" class="text-2xl font-semibold text-gray-900 mb-4">Changes to This Privacy Policy</h2>
+      <p class="text-gray-700">
+        We may update this Privacy Policy periodically. When changes are made, the updated version
+        will be posted on this page with a revised date.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="mb-10" aria-labelledby="contact">
+      <h2 id="contact" class="text-2xl font-semibold text-gray-900 mb-4">Contact Us</h2>
+      <p class="mb-4 text-gray-700">
+        If you have questions about this Privacy Policy, you may contact us:
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <a
+          href="mailto:contact@comegameapp.com"
+          class="text-blue-600 hover:underline ml-1"
+          aria-label="Email Come Game Guide at contact@comegameapp.com"
+        >
+          contact@comegameapp.com
+        </a>
+      </p>
+      <p class="mt-4 text-gray-700">
+        You can also visit our <a href="/contact" class="text-blue-600 hover:underline" aria-label="Go to Come Game Guide contact page">Contact page</a>
+        for additional ways to reach us.
+      </p>
+    </section>
+
+    <hr class="border-gray-200 mb-8" />
+
+    <!-- Footer note -->
+    <p class="text-sm text-gray-500 text-center">
+      Come Game Guide is an independent informational website. We are not affiliated with any gaming operator.
+      <a href="/about" class="text-blue-600 hover:underline ml-1" aria-label="Learn more about Come Game Guide">Learn about us</a>.
+    </p>
+
+  </main>
+</Layout>
