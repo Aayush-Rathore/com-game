@@ -102,7 +102,9 @@ const getNavAriaLabel = (name: string) =>
           cta_buttons?.[0] && (
             <a
               href={cta_buttons[0].url}
-              aria-label={`${cta_buttons[0].text} - open download page`}
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              aria-label={`${cta_buttons[0].text} - open official app link`}
               class="mt-2 inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring md:ml-3 md:mt-0"
             >
               <span>{cta_buttons[0].text}</span>

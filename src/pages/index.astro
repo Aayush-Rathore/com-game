@@ -7,7 +7,8 @@ const seoTitle =
 const seoDescription =
   'Come Game Guide helps Indian users understand come game app download, bonuses, deposits, withdrawals, risks, legality, and responsible gaming. Informational guide with affiliate links only.';
 const canonicalUrl = 'https://comegameapp.com/';
-const ogImage = 'https://comegameapp.com/og-home.jpg';
+const ogImage = 'https://comegameapp.com/android-chrome-512x512.png';
+const affiliateUrl = 'https://web-in.comegamehub.com/en/affiliate-invited?c=5DAGYXA3&s=3';
 
 const keywords = contentData.keywords;
 const keywordsMeta = keywords.slice(0, 80).join(', ');
@@ -117,7 +118,7 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'Come Game Guide',
   url: canonicalUrl,
-  logo: 'https://comegameapp.com/logo.svg',
+	logo: 'https://comegameapp.com/android-chrome-512x512.png',
   sameAs: [],
   description:
     'Come Game Guide is an informational website for Indian users with app guides, bonus explainers, payment education, and responsible gaming resources.',
@@ -142,6 +143,13 @@ const organizationSchema = {
 			<p class="inline-flex rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-primary">
 				Informational Site for India
 			</p>
+			<img
+				src="/logo.svg"
+				alt="Come Game App logo"
+				class="mt-5 h-16 w-16 rounded-xl object-contain"
+				loading="eager"
+				decoding="async"
+			/>
 			<h1 class="mt-4 max-w-4xl text-3xl font-black tracking-tight text-foreground md:text-5xl">
 				Come Game Guide India: Trusted Come Game App Download, Bonus, and Safety Information
 			</h1>
@@ -155,10 +163,12 @@ const organizationSchema = {
 			</p>
 			<div class="mt-8 flex flex-wrap items-center gap-3">
 				<a
-					href="/download-come-games-app"
+					href={affiliateUrl}
+					target="_blank"
+					rel="nofollow sponsored noopener"
 					class="inline-flex items-center rounded-lg bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition hover:bg-primary/90"
 				>
-					Start With Download Guide
+					Download Come Game App
 				</a>
 				<a
 					href="/come-games"
@@ -377,7 +387,7 @@ const organizationSchema = {
 				then review payment basics and responsible gaming notes. This sequence reduces common mistakes and improves decision quality.
 			</p>
 			<div class="mt-6 flex flex-wrap gap-3">
-				<a href="/download-come-games-app" class="inline-flex rounded-lg bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition hover:bg-primary/90">Read the complete Come Game app download instructions</a>
+				<a href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener" class="inline-flex rounded-lg bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition hover:bg-primary/90">Download Come Game App Now</a>
 				<a href="/real-money-come-games" class="inline-flex rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-accent">Read the real money Come Game deposits and withdrawals guide</a>
 				<a href="/responsible-gaming" class="inline-flex rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-accent">Read responsible gaming tips and risk-control checklist</a>
 			</div>
