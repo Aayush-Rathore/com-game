@@ -11,29 +11,28 @@ interface Props {
 }
 
 const {
-  title = 'Come Game Guide | Come Game App Download, Bonuses, and Safety Tips',
-  description = 'Come Game Guide is an informational website for Indian users covering come game app download steps, bonus guides, payment basics, risks, and responsible gaming tips.',
+	title = 'Come Game Guide: App Download, Bonus and Safety',
+	description = 'Come Game Guide is an informational site for Indian users covering app download steps, bonuses, payment basics, risks, and responsible gaming tips.',
   keywords = '',
-  canonical = 'https://comegameapp.com/',
-	ogImage = 'https://comegameapp.com/android-chrome-512x512.png',
+  canonical = 'https://www.comegameapp.com/',
+	ogImage = 'https://www.comegameapp.com/android-chrome-512x512.png',
 } = Astro.props as Props;
 
 const siteName = 'Come Game Guide';
-const primaryDomain = 'https://comegameapp.com';
-const secondaryDomain = 'https://www.comegameapp.com';
-const canonicalUrl = canonical.replace(/^https:\/\/www\.comegameapp\.com/, primaryDomain);
-const alternateWwwUrl = canonicalUrl.replace(/^https:\/\/comegameapp\.com/, secondaryDomain);
+const primaryDomain = 'https://www.comegameapp.com';
+const canonicalUrl = new URL(canonical, primaryDomain)
+	.toString()
+	.replace(/^https:\/\/comegameapp\.com/, primaryDomain);
 
 const organizationSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'Organization',
 	name: siteName,
 	url: primaryDomain,
-	logo: 'https://comegameapp.com/android-chrome-512x512.png',
+	logo: 'https://www.comegameapp.com/android-chrome-512x512.png',
 	email: 'contact@comegameapp.com',
 	description:
 		'Independent informational website for Indian users covering Come Game app download, safety, payments, and responsible gaming guidance.',
-	sameAs: [secondaryDomain],
 };
 
 const webPageSchema = {
@@ -72,9 +71,8 @@ const webPageSchema = {
 		<meta name="author" content={siteName} />
 		<meta name="theme-color" content="#0f172a" />
 		<link rel="canonical" href={canonicalUrl} />
-		<link rel="alternate" hreflang="en-IN" href={canonicalUrl} />
+		<link rel="alternate" hreflang="en-in" href={canonicalUrl} />
 		<link rel="alternate" hreflang="x-default" href={canonicalUrl} />
-		<link rel="alternate" href={alternateWwwUrl} />
 
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content={siteName} />
@@ -99,6 +97,41 @@ const webPageSchema = {
 		<main id="main-content">
 			<slot />
 		</main>
+		<footer class="border-t border-border/70 bg-card/50">
+			<div class="container mx-auto px-4 py-10">
+				<div class="grid gap-8 md:grid-cols-3">
+					<div>
+						<h2 class="text-lg font-extrabold text-foreground">Come Game Guide</h2>
+						<p class="mt-3 text-sm leading-6 text-muted-foreground">
+							Independent informational website for app guidance, safety, and responsible gaming resources.
+						</p>
+					</div>
+
+					<div>
+						<h3 class="text-sm font-bold uppercase tracking-wide text-foreground">Important Pages</h3>
+						<ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+							<li><a href="/" class="hover:text-foreground hover:underline">Home</a></li>
+							<li><a href="/come-games" class="hover:text-foreground hover:underline">Come Games</a></li>
+							<li><a href="/download-come-games-app" class="hover:text-foreground hover:underline">Download Guide</a></li>
+							<li><a href="/real-money-come-games" class="hover:text-foreground hover:underline">Real Money Guide</a></li>
+							<li><a href="/responsible-gaming" class="hover:text-foreground hover:underline">Responsible Gaming</a></li>
+							<li><a href="/faq" class="hover:text-foreground hover:underline">FAQ</a></li>
+							<li><a href="/contact" class="hover:text-foreground hover:underline">Contact</a></li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="text-sm font-bold uppercase tracking-wide text-foreground">Company & Legal</h3>
+						<ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+							<li><a href="/about" class="hover:text-foreground hover:underline">About</a></li>
+							<li><a href="/privacy-policy" class="hover:text-foreground hover:underline">Privacy Policy</a></li>
+							<li><a href="/terms-and-conditions" class="hover:text-foreground hover:underline">Terms & Conditions</a></li>
+							<li><a href="/disclaimer" class="hover:text-foreground hover:underline">Disclaimer</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
 

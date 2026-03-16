@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "comegameapp.com"
+        }
+      ],
+      "destination": "https://www.comegameapp.com/:path*",
+      "permanent": true
+    }
+  ]
+}
