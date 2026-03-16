@@ -18,7 +18,11 @@ const telegramShareUrl = `https://t.me/share/url?url=${encodedShareUrl}&text=${e
 const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedShareUrl}`;
 
 const keywords = contentData.keywords;
-const keywordsMeta = keywords.slice(0, 80).join(', ');
+const uniqueKeywords = keywords.filter(
+	(keyword, index) =>
+		keywords.findIndex((item) => item.trim().toLowerCase() === keyword.trim().toLowerCase()) === index,
+);
+const keywordsMeta = uniqueKeywords.slice(0, 80).join(', ');
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -435,7 +439,7 @@ const organizationSchema = {
 			<div class="mt-6 rounded-lg border border-border bg-background/60 p-4">
 				<h3 class="text-sm font-bold uppercase tracking-wide text-foreground">Popular Search Topics</h3>
 				<ul class="mt-3 flex flex-wrap gap-2">
-					{keywords.slice(0, 40).map((term) => (
+					{uniqueKeywords.slice(0, 40).map((term) => (
 						<li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">{term}</li>
 					))}
 				</ul>
