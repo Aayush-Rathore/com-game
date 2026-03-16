@@ -8,6 +8,14 @@ const seoDescription =
 const canonicalUrl = 'https://www.comegameapp.com/';
 const ogImage = 'https://www.comegameapp.com/android-chrome-512x512.png';
 const affiliateUrl = 'https://web-in.comegamehub.com/en/affiliate-invited?c=5DAGYXA3&s=3';
+const shareText = 'Come Game App Guide for India: Download, Bonus and Safety';
+const encodedShareText = encodeURIComponent(shareText);
+const encodedShareUrl = encodeURIComponent(canonicalUrl);
+const xShareUrl = `https://twitter.com/intent/tweet?text=${encodedShareText}&url=${encodedShareUrl}`;
+const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}`;
+const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(`${shareText} ${canonicalUrl}`)}`;
+const telegramShareUrl = `https://t.me/share/url?url=${encodedShareUrl}&text=${encodedShareText}`;
+const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedShareUrl}`;
 
 const keywords = contentData.keywords;
 const keywordsMeta = keywords.slice(0, 80).join(', ');
@@ -389,6 +397,22 @@ const organizationSchema = {
 				<a href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener" class="inline-flex rounded-lg bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition hover:bg-primary/90">Download Come Game App Now</a>
 				<a href="/real-money-come-games" class="inline-flex rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-accent">Read the real money Come Game deposits and withdrawals guide</a>
 				<a href="/responsible-gaming" class="inline-flex rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-accent">Read responsible gaming tips and risk-control checklist</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="share-guide" class="border-y border-border/70 bg-card/40">
+		<div class="container mx-auto px-4 py-12">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Share This Guide</h2>
+			<p class="mt-3 max-w-3xl text-base leading-7 text-muted-foreground">
+				Help more users discover this informational resource by sharing it on your preferred social platform.
+			</p>
+			<div class="mt-6 flex flex-wrap gap-3">
+				<a href={xShareUrl} target="_blank" rel="nofollow noopener noreferrer external" class="inline-flex items-center rounded-lg border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition hover:bg-accent">Share on X</a>
+				<a href={facebookShareUrl} target="_blank" rel="nofollow noopener noreferrer external" class="inline-flex items-center rounded-lg border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition hover:bg-accent">Share on Facebook</a>
+				<a href={whatsappShareUrl} target="_blank" rel="nofollow noopener noreferrer external" class="inline-flex items-center rounded-lg border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition hover:bg-accent">Share on WhatsApp</a>
+				<a href={telegramShareUrl} target="_blank" rel="nofollow noopener noreferrer external" class="inline-flex items-center rounded-lg border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition hover:bg-accent">Share on Telegram</a>
+				<a href={linkedinShareUrl} target="_blank" rel="nofollow noopener noreferrer external" class="inline-flex items-center rounded-lg border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition hover:bg-accent">Share on LinkedIn</a>
 			</div>
 		</div>
 	</section>
