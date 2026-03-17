@@ -2,13 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import contentData from '../assets/content.json';
 
-const seoTitle = 'Come Game Guide India: App Download, Bonus and Safety';
+const seoTitle = 'Come Game & Com Game Guide India: Download, Bonus, Safety';
 const seoDescription =
-	'Come Game Guide helps Indian users understand app download, bonuses, deposits, withdrawals, legality, and responsible gaming. Informational affiliate guide.';
+	'Come Game Guide helps Indian users searching come game, com game, comegame, and comgames with app download steps, bonuses, payments, legality, and responsible gaming reminders.';
 const canonicalUrl = 'https://www.comegameapp.com/';
 const ogImage = 'https://www.comegameapp.com/android-chrome-512x512.png';
 const affiliateUrl = 'https://web-in.comegamehub.com/en/affiliate-invited?c=5DAGYXA3&s=3';
-const shareText = 'Come Game App Guide for India: Download, Bonus and Safety';
+const shareText = 'Come Game & Com Game App Guide for India: Download, Bonus and Safety';
 const encodedShareText = encodeURIComponent(shareText);
 const encodedShareUrl = encodeURIComponent(canonicalUrl);
 const xShareUrl = `https://twitter.com/intent/tweet?text=${encodedShareText}&url=${encodedShareUrl}`;
@@ -16,6 +16,32 @@ const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encoded
 const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(`${shareText} ${canonicalUrl}`)}`;
 const telegramShareUrl = `https://t.me/share/url?url=${encodedShareUrl}&text=${encodedShareText}`;
 const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedShareUrl}`;
+const searchTermVariants = [
+	{
+		term: 'Come Game',
+		description: 'Primary spelling used across guides, FAQ pages, and download resources for Indian players.',
+	},
+	{
+		term: 'Com Game',
+		description: 'High-volume shorthand spelling; users usually want the same app onboarding and safety tips.',
+	},
+	{
+		term: 'Come Games',
+		description: 'Plural search for updates on multiple game formats, events, and reward drops.',
+	},
+	{
+		term: 'Com Games',
+		description: 'Alternate plural variation that needs clear navigation to verified guides.',
+	},
+	{
+		term: 'Comegame',
+		description: 'Merged spelling typed on mobile; intent is identical to "come game app" research.',
+	},
+	{
+		term: 'Comgames',
+		description: 'Another compressed version referencing the same ecosystem of mobile game guides.',
+	},
+];
 
 const keywords = contentData.keywords;
 const uniqueKeywords = keywords.filter(
@@ -36,6 +62,14 @@ const faqSchema = {
         text: 'Com Game is an online gaming platform where players can play skill-based games, compete with other players, and earn rewards through gameplay.',
       },
     },
+		{
+			'@type': 'Question',
+			name: 'Is Come Game the same as Com Game or Comegame?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Yes. Search variations including "come game", "com game", "come games", "com games", "comegame", and "comgames" refer to the same ecosystem covered by this informational guide.',
+			},
+		},
     {
       '@type': 'Question',
       name: 'How can I play games on Com Game?',
@@ -162,15 +196,19 @@ const organizationSchema = {
 				decoding="async"
 			/>
 			<h1 class="mt-4 max-w-4xl text-3xl font-black tracking-tight text-foreground md:text-5xl">
-				Come Game Guide India: Trusted Come Game App Download, Bonus, and Safety Information
+				Come Game & Com Game Guide India: Trusted Download, Bonus, and Safety Information
 			</h1>
 			<p class="mt-5 max-w-3xl text-base leading-7 text-muted-foreground md:text-lg">
 				Welcome to Come Game Guide, your independent information hub for the <strong>come game</strong>
-				 ecosystem. We publish practical guides for Indian users who want clear details about the
-				 <strong>come game app</strong>, onboarding, promotions, payment steps, and responsible
-				 gaming expectations. This website does not run games, accept bets, or process deposits.
-				 We only provide educational content and affiliate links to help readers make informed
-				 decisions.
+				 and <strong>com game</strong> ecosystem. We publish practical guides for Indian users who want
+				 clear details about the <strong>come game app</strong>, onboarding, promotions, payment steps,
+				 and responsible gaming expectations.
+			</p>
+			<p class="mt-3 max-w-3xl text-base leading-7 text-muted-foreground md:text-lg">
+				Whether you search for <strong>come game</strong>, <strong>com game</strong>, <strong>come games</strong>,
+				 <strong>com games</strong>, <strong>comegame</strong>, or <strong>comgames</strong>, you are looking for the
+				 same verified resources. This website does not run games, accept bets, or process deposits. We only
+				 provide educational content and affiliate links so readers can make informed decisions.
 			</p>
 			<div class="mt-8 flex flex-wrap items-center gap-3">
 				<a
@@ -192,6 +230,35 @@ const organizationSchema = {
 				<li class="rounded-lg border border-border bg-card/70 p-3">Guide-first content updated for Indian audience</li>
 				<li class="rounded-lg border border-border bg-card/70 p-3">Responsible gaming warning and risk disclosures</li>
 				<li class="rounded-lg border border-border bg-card/70 p-3">Transparent: informational resource with affiliate links only</li>
+			</ul>
+		</div>
+	</section>
+
+	<section id="come-game-search-intent" class="container mx-auto px-4 py-14">
+		<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Come Game vs Com Game: Search Terms Explained</h2>
+		<p class="mt-4 max-w-4xl text-base leading-7 text-muted-foreground">
+			Google shows similar results for spellings like <strong>come game</strong>, <strong>com game</strong>, <strong>come games</strong>,
+			<strong>com games</strong>, <strong>comegame</strong>, and <strong>comgames</strong>. This section helps readers confirm they have
+			reached the verified informational site before following any download or affiliate link.
+		</p>
+		<div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+			{searchTermVariants.map((variant) => (
+				<article class="rounded-xl border border-border bg-card p-5" data-variant={variant.term}>
+					<h3 class="text-lg font-bold text-foreground">{variant.term}</h3>
+					<p class="mt-2 text-sm leading-6 text-muted-foreground">{variant.description}</p>
+				</article>
+			))}
+		</div>
+		<div class="mt-8 rounded-2xl border border-border bg-card/60 p-5">
+			<h3 class="text-sm font-bold uppercase tracking-wide text-foreground">Top user queries we optimize for</h3>
+			<p class="mt-3 text-sm leading-6 text-muted-foreground">
+				We include primary and misspelled variations so search engines understand that this is the trusted
+				resource for the official guides.
+			</p>
+			<ul class="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-foreground">
+				{['come game', 'com game', 'come games', 'com games', 'comegame', 'comgames'].map((term) => (
+					<li class="rounded-full border border-border bg-card px-3 py-1">{term}</li>
+				))}
 			</ul>
 		</div>
 	</section>
@@ -374,18 +441,19 @@ const organizationSchema = {
 		<div class="container mx-auto px-4 py-14">
 			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Frequently Asked Questions</h2>
 			<div class="mt-8 space-y-4">
-				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">1. What is come game?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Come game generally refers to an app ecosystem where users explore game-based experiences and possible reward mechanisms. This website explains it for Indian users in simple language.</p></details>
-				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">2. What is the come game app?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">The come game app is typically the mobile version users install for account access, events, bonus pages, and payment options. Features vary by provider and update cycle.</p></details>
-				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">3. How to download come game app safely?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Use our <a href="/download-come-games-app" class="text-primary underline-offset-4 hover:underline">Come Game app download guide with safety checks</a>, verify source authenticity, and avoid random APK links. Check permissions before installation.</p></details>
-				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">4. Is come game legal in India?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Rules can differ by state. Always review local laws and platform terms before joining any real-money feature.</p></details>
-				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">5. Is come game safe?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Safety depends on account hygiene, payment discipline, and source verification. Use strong credentials and avoid sharing OTPs.</p></details>
-				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">6. How can I withdraw from come game?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Most platforms require account verification and correct payment details before withdrawal. Processing time can vary by policy.</p></details>
-				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">7. What is real money come game?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">This usually refers to features involving deposits and potential cash outcomes. Participation carries financial risk and is not suitable for everyone.</p></details>
-				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">8. Does this website operate come games?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">No. Come Game Guide is an informational site with affiliate links. We do not host or operate games.</p></details>
-				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">9. Where can I read about come game bonus terms?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Visit our bonus explanations on the homepage and related pages, then compare terms before claiming any offer.</p></details>
-				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">10. Is come game available on mobile in India?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Users in India generally access mobile versions, but availability and features depend on updates, verification, and local conditions.</p></details>
-				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">11. Can beginners use come game guides?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Yes, our guides are written in plain language for beginners and include safety notes, payment basics, and responsible gaming reminders.</p></details>
-				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">12. Where can I learn more about this website?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Read our <a href="/about" class="text-primary underline-offset-4 hover:underline">about Come Game Guide and editorial policy page</a> for editorial principles and transparency policy.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">What is come game?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Come game generally refers to an app ecosystem where users explore game-based experiences and possible reward mechanisms. This website explains it for Indian users in simple language.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">Is come game the same as com game or comegame?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Yes. Spellings such as com game, come games, com games, comegame, and comgames lead to the same informational intent. We optimize for every variation so readers reach the verified guidance page.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">What is the come game app?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">The come game app is typically the mobile version users install for account access, events, bonus pages, and payment options. Features vary by provider and update cycle.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">How to download come game app safely?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Use our <a href="/download-come-games-app" class="text-primary underline-offset-4 hover:underline">Come Game app download guide with safety checks</a>, verify source authenticity, and avoid random APK links. Check permissions before installation.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">Is come game legal in India?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Rules can differ by state. Always review local laws and platform terms before joining any real-money feature.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">Is come game safe?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Safety depends on account hygiene, payment discipline, and source verification. Use strong credentials and avoid sharing OTPs.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">How can I withdraw from come game?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Most platforms require account verification and correct payment details before withdrawal. Processing time can vary by policy.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">What is real money come game?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">This usually refers to features involving deposits and potential cash outcomes. Participation carries financial risk and is not suitable for everyone.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">Does this website operate come games?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">No. Come Game Guide is an informational site with affiliate links. We do not host or operate games.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">Where can I read about come game bonus terms?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Visit our bonus explanations on the homepage and related pages, then compare terms before claiming any offer.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">Is come game available on mobile in India?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Users in India generally access mobile versions, but availability and features depend on updates, verification, and local conditions.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">Can beginners use come game guides?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Yes, our guides are written in plain language for beginners and include safety notes, payment basics, and responsible gaming reminders.</p></details>
+				<details class="rounded-xl border border-border bg-card p-4"><summary class="cursor-pointer font-semibold text-foreground">Where can I learn more about this website?</summary><p class="mt-3 text-sm leading-7 text-muted-foreground">Read our <a href="/about" class="text-primary underline-offset-4 hover:underline">about Come Game Guide and editorial policy page</a> for editorial principles and transparency policy.</p></details>
 			</div>
 		</div>
 	</section>
