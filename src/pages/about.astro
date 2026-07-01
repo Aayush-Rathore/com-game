@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import contentData from '../assets/content.json';
+import { PUBLIC_SITE_URL } from 'astro:env/client';
 
 const seoTitle = 'About Come Game: Real Money Guide for India';
 const seoDescription =
   'Learn about Come Game, the types of games offered on the platform, and how real money gaming works. Independent informational guide for Indian users.';
-const canonicalUrl = 'https://www.comegameapp.com/about';
-const ogImage = 'https://www.comegameapp.com/android-chrome-512x512.png';
+const canonicalUrl = `${PUBLIC_SITE_URL}/about`;
+const ogImage = `${PUBLIC_SITE_URL}/android-chrome-512x512.png`;
 const keywordsMeta = contentData.keywords.slice(0, 80).join(', ');
 
 const faqSchema = {

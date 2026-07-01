@@ -1,0 +1,595 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { PUBLIC_SITE_URL } from 'astro:env/client';
+
+const seoTitle = 'Comegame Account Setup Guide: Registration, KYC & Security Tips for Indian Users';
+const seoDescription =
+	'Complete guide to setting up your Comegame account — step-by-step registration, KYC document requirements, security settings, 2FA, UPI linking, and common error fixes for Indian users.';
+const canonicalUrl = `${PUBLIC_SITE_URL}/blog/comegame-account-setup-guide`;
+const ogImage = `${PUBLIC_SITE_URL}/android-chrome-512x512.png`;
+const keywordsMeta =
+	'comegame account setup, comegame registration india, comegame KYC guide, comegame 2FA security, comegame profile setup, comegame UPI linking, online gaming account india, comegame login security';
+
+const articleSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BlogPosting',
+	headline: seoTitle,
+	description: seoDescription,
+	url: canonicalUrl,
+	image: ogImage,
+	datePublished: '2026-07-01',
+	dateModified: '2026-07-01',
+	inLanguage: 'en-IN',
+	author: { '@type': 'Organization', name: 'Come Game Guide' },
+	publisher: {
+		'@type': 'Organization',
+		name: 'Come Game Guide',
+		logo: { '@type': 'ImageObject', url: ogImage },
+	},
+	mainEntityOfPage: canonicalUrl,
+};
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: [
+		{
+			'@type': 'Question',
+			name: 'What documents are needed to verify a Comegame account?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Standard KYC documents for Comegame include a government-issued photo ID (Aadhaar card, PAN card, passport, or voter ID) and a PAN card specifically for tax compliance purposes. Proof of address may also be required.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'How long does Comegame KYC verification take?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'KYC verification on Comegame typically takes a few hours to two business days. Submitting clear, well-lit photographs of documents and ensuring name consistency speeds up the process.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Can I use the same mobile number for multiple Comegame accounts?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'No. Each mobile number can only be linked to one Comegame account. Creating multiple accounts with the same number is not possible, and creating multiple accounts with different numbers to claim multiple welcome bonuses is against the platform\'s terms and can result in account suspension.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'What is two-factor authentication on Comegame?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Two-factor authentication (2FA) adds a second verification step to your login — typically an OTP sent to your registered mobile number. Even if someone knows your password, they cannot access your account without the OTP.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'What should I do if my Comegame registration OTP is not received?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Wait 60 seconds and use the resend option. Ensure your mobile number is entered correctly and has network signal. If the problem persists, try a different network or contact Comegame support through the official contact page.',
+			},
+		},
+	],
+};
+---
+
+<Layout
+	title={seoTitle}
+	description={seoDescription}
+	keywords={keywordsMeta}
+	canonical={canonicalUrl}
+	ogImage={ogImage}
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+	</Fragment>
+
+	<article class="container mx-auto px-4 py-12 md:py-16">
+		<header class="max-w-4xl">
+			<a href="/blog" class="inline-flex rounded-full border border-border bg-card px-3 py-1 text-xs font-bold uppercase tracking-wide text-muted-foreground hover:text-foreground">
+				Back to Blog
+			</a>
+			<h1 class="mt-4 text-3xl font-black tracking-tight text-foreground md:text-5xl">
+				Comegame Account Setup Guide: Registration, KYC &amp; Security Tips for Indian Users
+			</h1>
+			<p class="mt-3 text-sm font-semibold text-muted-foreground">Published on July 1, 2026 | Account Setup &amp; Security Guide</p>
+			<p class="mt-5 text-base leading-7 text-muted-foreground md:text-lg">
+				Setting up a Comegame account correctly from the start saves considerable trouble later. A properly
+				completed registration — with verified identity, secure settings, and a correctly linked payment
+				method — means faster withdrawals, no KYC-related blocks, and a well-protected account. This guide
+				covers every step from the initial download to a fully secure, withdrawal-ready profile.
+			</p>
+		</header>
+
+		<div class="mt-8 max-w-5xl overflow-hidden rounded-2xl border border-border bg-card/50 p-5">
+			<div class="grid items-center gap-4 md:grid-cols-[auto_1fr]">
+				<img src="/logo.svg" alt="Comegame account setup guide India" class="h-16 w-16 rounded-xl border border-border bg-background p-2" loading="lazy" decoding="async" />
+				<p class="text-sm leading-7 text-muted-foreground">
+					This guide covers account creation through to full verification. If you are already registered and
+					looking for game-specific guidance, visit the
+					<a href="/come-games" class="text-primary underline-offset-4 hover:underline">Come Games section</a>.
+					For information on downloading the app safely before registration, see the
+					<a href="/download-come-games-app" class="text-primary underline-offset-4 hover:underline">Comegame app download guide</a>.
+				</p>
+			</div>
+		</div>
+
+		<section class="mt-10 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Before You Register: Things to Have Ready</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Registration on Comegame is a quick process, but having certain items ready beforehand makes it
+				seamless and prevents the need to restart or correct details later. Here is what to gather before
+				you begin.
+			</p>
+			<ul class="mt-4 list-disc space-y-3 pl-6 text-base leading-7 text-muted-foreground">
+				<li>
+					<strong class="text-foreground">Active Indian mobile number:</strong> Your mobile number is your
+					primary identifier on the platform. Ensure the number is currently active and receiving SMS —
+					you will need it for OTP verification during registration, login, and withdrawals. Use a number
+					you have long-term access to; changing it later requires a formal account update process.
+				</li>
+				<li>
+					<strong class="text-foreground">PAN card details:</strong> PAN is mandatory for Indian gaming
+					platforms because of TDS compliance requirements. Have your PAN number and a clear photograph
+					of the physical card ready.
+				</li>
+				<li>
+					<strong class="text-foreground">Aadhaar card:</strong> Used as proof of identity and address.
+					Your Aadhaar name must match the name you use during registration exactly.
+				</li>
+				<li>
+					<strong class="text-foreground">UPI ID or bank account details:</strong> You will need these
+					to link a payment method for deposits and withdrawals. Ensure the bank account or UPI ID is
+					registered in your own name — third-party payment accounts will not pass verification.
+				</li>
+				<li>
+					<strong class="text-foreground">Valid email address (if required):</strong> Some platforms
+					require email alongside mobile registration. Use an address you regularly access, as
+					important notifications and security alerts may be sent there.
+				</li>
+			</ul>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				The app itself should be downloaded from a verified source. Our
+				<a href="/download-come-games-app" class="text-primary underline-offset-4 hover:underline">Comegame app download guide</a>
+				identifies the safest installation method and explains what permissions to accept during installation.
+				Installing from unofficial APK sources is a significant security risk and should be avoided.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Step-by-Step Registration Process</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				The Comegame registration process follows a standard flow common to most Indian gaming platforms.
+				Here is each step with specific guidance on what to enter and what to avoid.
+			</p>
+			<ol class="mt-5 list-decimal space-y-5 pl-6 text-base leading-7 text-muted-foreground">
+				<li>
+					<strong class="text-foreground">Open the app and tap "Register" or "Sign Up."</strong>
+					You will be directed to the registration screen. Do not use a "Sign in with Google" option if
+					you intend to use a specific mobile number as your primary identifier — the account details
+					may differ.
+				</li>
+				<li>
+					<strong class="text-foreground">Enter your mobile number.</strong>
+					Double-check the number before tapping "Send OTP." An incorrect number means the OTP goes
+					to someone else, and you will need to start over. Enter the number without the country code
+					prefix unless the field explicitly asks for it.
+				</li>
+				<li>
+					<strong class="text-foreground">Enter the OTP.</strong>
+					The OTP is typically valid for 60–120 seconds. If it expires before you enter it, use the
+					"Resend OTP" option. Do not share the OTP with anyone, including anyone claiming to be
+					platform support.
+				</li>
+				<li>
+					<strong class="text-foreground">Enter your full name.</strong>
+					Use your legal name exactly as it appears on your Aadhaar card. Do not use nicknames,
+					initials only, or abbreviated versions. A mismatch between your registration name and KYC
+					documents will cause verification failure and block withdrawals later.
+				</li>
+				<li>
+					<strong class="text-foreground">Set a strong password.</strong>
+					Use a password that is at least 12 characters long, contains uppercase and lowercase letters,
+					numbers, and a special character. Do not reuse a password you use on other platforms. See
+					the password security section later in this guide for best practices.
+				</li>
+				<li>
+					<strong class="text-foreground">Enter your date of birth.</strong>
+					You must be at least 18 years old to register on Comegame. Enter your actual date of birth —
+					it will be verified against your KYC documents.
+				</li>
+				<li>
+					<strong class="text-foreground">Accept the Terms and Conditions.</strong>
+					Read the key sections before accepting — particularly the sections on bonus terms, responsible
+					gaming, and state-specific restrictions. Our
+					<a href="/faq" class="text-primary underline-offset-4 hover:underline">FAQ page</a> summarises
+					the most commonly asked questions about platform terms if you want a quicker reference.
+				</li>
+				<li>
+					<strong class="text-foreground">Apply a referral code if applicable.</strong>
+					If a friend referred you, enter their referral code during registration to claim the
+					enhanced welcome offer. This field is usually only available during registration — you
+					cannot add a referral code retroactively.
+				</li>
+			</ol>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">KYC Verification: What It Is and Why It Matters</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				KYC — Know Your Customer — is a regulatory requirement that Indian financial service providers and
+				gaming platforms must comply with. It involves verifying that the person behind an account is who
+				they say they are, is of legal age, and is not using the account for fraudulent purposes. For users,
+				completed KYC unlocks the full functionality of the platform: specifically, the ability to withdraw
+				winnings without holds or delays.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Many users delay KYC until they want to make their first withdrawal, at which point the verification
+				process becomes an obstacle. The smarter approach is to complete KYC during your first week of use,
+				before your balance is significant. This way, when you are ready to withdraw, the process is already
+				complete.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Understanding the full lifecycle of money on the platform — from deposit through play to withdrawal —
+				helps you understand why KYC is positioned where it is. Our
+				<a href="/blog/comegame-withdrawal-guide" class="text-primary underline-offset-4 hover:underline">Comegame withdrawal guide</a>
+				explains how KYC status directly affects your ability to cash out and what to do if verification
+				is taking longer than expected.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">KYC Document Requirements in Detail</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Comegame's KYC process accepts standard Indian identity and address documents. Here is a breakdown
+				of each acceptable document type, what information it provides, and tips for submitting it correctly.
+			</p>
+			<div class="mt-5 space-y-5">
+				<div>
+					<h3 class="text-xl font-bold text-foreground">PAN Card (Mandatory)</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						The Permanent Account Number card is required on all Indian gaming platforms for TDS compliance.
+						Submit a clear photograph of both front and back. The name on the PAN card must match your
+						account name. If you have a recently updated name (for example, after marriage), use an
+						updated PAN card or an affidavit alongside an older document.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-foreground">Aadhaar Card (Identity and Address)</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						Aadhaar serves dual purpose — it verifies both identity and address. Submit clear photographs
+						of front and back. Ensure the name, date of birth, and address are clearly readable. If your
+						Aadhaar shows an old address that does not match your current location, that is acceptable
+						as long as the name and date of birth are accurate and consistent with your account details.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-foreground">Passport (Alternative Identity Document)</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						Accepted as an alternative to Aadhaar. Submit the photo page and the page with your date of
+						birth and nationality. Passports are particularly useful if your Aadhaar has outdated
+						information that does not align with your current legal name.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-foreground">Voter ID</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						Accepted on most platforms as both identity and address proof. Photograph front and back clearly.
+						Voter ID is a good alternative if you have concerns about sharing your Aadhaar number online.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-foreground">Tips for Document Photography</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						The single most common reason for KYC rejection is a blurry or poorly lit document photograph.
+						Use the following checklist: photograph in good natural or artificial light without flash glare;
+						place the document flat on a plain dark surface; hold the camera directly above (not at an angle);
+						ensure all four corners of the document are visible; verify the text is legible when you zoom
+						into the preview before submitting. Rejected KYC means starting the submission process again
+						and adds delays, so take the extra minute to get the photograph right.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Profile Setup: Completing Your Account Details</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Beyond basic registration and KYC, a complete Comegame profile includes an accurate address, a
+				profile photo (optional but helpful for identity consistency), and fully linked payment methods.
+				Taking fifteen minutes to complete all profile fields properly eliminates friction for every
+				subsequent platform interaction.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				The address you enter should match the address on your KYC document. Discrepancies are rarely a
+				problem if your KYC documents are accepted, but it is cleaner to keep them consistent. Your
+				profile email address should be one you actively check — important alerts, including withdrawal
+				confirmations and security notifications, arrive there.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Once your profile is complete, take a tour of the platform before playing. Our article explaining
+				<a href="/blog/how-comegame-works-features-gameplay-basics" class="text-primary underline-offset-4 hover:underline">how Comegame works and its features</a>
+				is a useful companion to this setup guide — it explains what each section of the platform is for
+				and how to navigate it efficiently.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Linking Your UPI or Bank Account</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Comegame's primary payment method for Indian users is UPI, supplemented by direct bank transfers
+				via NEFT or IMPS for larger amounts. Linking your payment method correctly from the start is critical
+				because mismatched or incorrectly formatted payment details are a leading cause of failed withdrawals.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				To link a UPI ID: go to your account settings, find the "Payment Methods" or "Bank Details" section,
+				and enter your UPI Virtual Payment Address (VPA) — this looks like yourname@bankshortcode or
+				mobilenumber@upi depending on your UPI app. Double-check the full address before saving. Many
+				platforms perform a small verification transfer (₹1) to confirm the UPI ID is valid and active.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				To link a bank account directly: you will need your account number, IFSC code, and the account
+				holder's name (which must match your Comegame account name). The bank name and branch details
+				are usually auto-populated once you enter a valid IFSC code. Use the IFSC finder in your banking
+				app if you are unsure of the correct code — entering an incorrect IFSC is a common error that
+				causes transfers to fail or go to the wrong bank.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				One important rule: do not link a payment method registered to a different person. The name on your
+				bank account or UPI must match the name on your Comegame account and KYC documents. Third-party
+				payment methods will be rejected during the withdrawal verification process. This is both a platform
+				rule and an anti-fraud measure required by Indian financial regulations.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Security Settings: Protecting Your Account</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Account security on gaming platforms is frequently underestimated. A compromised Comegame account
+				can result in stolen wallet funds, misused personal information, and a support resolution process
+				that takes weeks. Investing five minutes in security settings at the point of registration is far
+				less painful than recovering from a security incident later.
+			</p>
+			<h3 class="mt-5 text-xl font-bold text-foreground">Two-Factor Authentication (2FA)</h3>
+			<p class="mt-3 text-base leading-7 text-muted-foreground">
+				Two-factor authentication adds a second verification step to your login. Even if an attacker has
+				your password, they cannot access your account without the OTP sent to your registered mobile
+				number. Enable 2FA in your account security settings as soon as you register. Most Comegame-style
+				platforms send the second factor via SMS OTP — the same number you registered with.
+			</p>
+			<p class="mt-3 text-base leading-7 text-muted-foreground">
+				Never share your 2FA OTP with anyone. Attackers frequently use social engineering — posing as
+				platform support, a "lucky draw coordinator," or a "verification agent" — to trick users into
+				reading out OTP codes. Legitimate platform processes never require you to share an OTP with a
+				human operator.
+			</p>
+			<h3 class="mt-5 text-xl font-bold text-foreground">Password Best Practices</h3>
+			<p class="mt-3 text-base leading-7 text-muted-foreground">
+				Your Comegame password should be unique to this platform. Using the same password across multiple
+				accounts is one of the highest-risk security habits — when one service is breached, all your
+				accounts sharing that password become vulnerable. Use a password manager (such as Bitwarden, which
+				is free and open source) to generate and store a strong, unique password for each platform you use.
+			</p>
+			<p class="mt-3 text-base leading-7 text-muted-foreground">
+				A strong password follows this pattern: minimum 12 characters, includes at least one uppercase letter,
+				one lowercase letter, one numeral, and one special character (such as !, @, #, or $). Avoid dictionary
+				words, names, birth dates, or keyboard patterns like "qwerty123." Change your password if you ever
+				suspect your account has been accessed without your knowledge, and immediately after logging in from
+				a shared or public device.
+			</p>
+			<h3 class="mt-5 text-xl font-bold text-foreground">Session Security and Device Management</h3>
+			<p class="mt-3 text-base leading-7 text-muted-foreground">
+				Log out of your Comegame account when using a shared device. Most platforms maintain active sessions
+				across devices — check your account settings for an "Active Sessions" or "Logged In Devices" section.
+				If you see an unfamiliar device or location, revoke that session immediately and change your password.
+				Enable account lock after failed login attempts if the platform offers it.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Common Registration Errors and How to Fix Them</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Even straightforward registration processes throw up errors. Here are the most frequently
+				reported issues and their solutions.
+			</p>
+			<div class="mt-5 space-y-5">
+				<div>
+					<h3 class="text-xl font-bold text-foreground">OTP Not Received</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						If the registration OTP does not arrive within 60 seconds, first verify the mobile number
+						is entered correctly, then tap "Resend OTP." If still not received: check that your
+						phone has network signal and SMS-blocking apps (like DND settings or third-party call
+						managers) are not filtering the message. Try a different network if available. If the
+						issue persists, contact support via the
+						<a href="/contact" class="text-primary underline-offset-4 hover:underline">Comegame contact page</a>.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-foreground">"Mobile Number Already Registered" Error</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						This means an account already exists with your number. Use the "Forgot Password" or "Login"
+						option rather than creating a new account. If you genuinely have not registered before,
+						someone else may have used your number — contact support immediately to investigate and
+						secure the account.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-foreground">App Crashes During Registration</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						This is typically a version issue. Update the app to the latest version and retry. Clear
+						the app cache if the crash persists. If you installed from an unofficial APK source, the
+						file may be corrupted — reinstall from the verified source in our
+						<a href="/download-come-games-app" class="text-primary underline-offset-4 hover:underline">download guide</a>.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-foreground">KYC Documents Rejected</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						Rejection reasons are usually specified in the rejection notification: blurry image, name
+						mismatch, expired document, or partially visible document. Resubmit with a corrected
+						photograph addressing the specific rejection reason. If the rejection reason is a name
+						mismatch between your profile and your document, update your profile name first — you
+						cannot change KYC document names, only your account profile details.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-foreground">Unable to Link UPI/Bank Account</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						Verify the UPI VPA or bank account details are correct and the account is active. Ensure
+						the account holder name matches your Comegame profile name exactly. If using a UPI ID,
+						confirm the linked bank account is active and not suspended. If the platform performs a
+						₹1 verification transfer that fails, check with your bank whether UPI is enabled for
+						your account.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">State-Specific Restrictions and Age Verification</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				India's gaming regulatory landscape is governed partly at the state level. Certain states —
+				including Telangana, Andhra Pradesh, and Tamil Nadu among others historically — have introduced
+				regulations restricting online real-money gaming. Comegame complies with these restrictions, which
+				means users from restricted states may find certain features unavailable, including paid competitions
+				and deposits.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				State detection is typically done at registration via the mobile number's registered state and,
+				where applicable, IP address or address in KYC. Attempting to circumvent state restrictions using
+				VPNs or incorrect addresses is against the platform terms and can result in permanent account
+				suspension and forfeiture of any balance. Always verify your state's current regulations before
+				registering for paid features.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Age verification is mandatory. You must be at least 18 years old to register. This is verified
+				through your KYC date of birth — the date you enter during registration must match your government
+				ID documents. Attempting to circumvent the age requirement violates terms and Indian law.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Responsible Gaming Settings in Your Account</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				A properly set up account includes not just security and payment settings but also responsible
+				gaming configurations. Comegame provides tools that let you manage your own behaviour proactively —
+				use them from day one rather than waiting until a problem develops.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Deposit limits let you cap how much you add to your wallet per day, week, or month. Setting these
+				limits at the account level is more reliable than relying on self-discipline in the moment. Once
+				a limit is set, the platform will block deposits that exceed it — even if you are on a losing run
+				and tempted to top up. Most platforms require a cooling-off period before a limit increase takes
+				effect, which provides an important buffer against impulsive decisions.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Session time reminders and cool-off periods are also available on responsible platforms. These
+				prompt you when you have been playing for a set duration and let you take structured breaks.
+				Self-exclusion options allow you to temporarily or permanently block yourself from the platform —
+				a valuable tool if gaming ever feels compulsive. Our
+				<a href="/responsible-gaming" class="text-primary underline-offset-4 hover:underline">responsible gaming guide</a>
+				covers all of these tools in detail, along with self-assessment questions and support resources
+				available to Indian users. Reading this guide before your first deposit is strongly recommended.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">After Setup: What to Do Next</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				With your account registered, KYC submitted, payment method linked, and security settings configured,
+				you are ready to explore the platform properly. Here are the recommended next steps in order.
+			</p>
+			<ol class="mt-5 list-decimal space-y-4 pl-6 text-base leading-7 text-muted-foreground">
+				<li>
+					<strong class="text-foreground">Explore the game catalogue before playing.</strong>
+					Navigate every section of the app — games, wallet, promotions, support — without making any
+					commitments. Familiarity with the layout prevents accidental deposits and helps you make
+					informed game choices.
+				</li>
+				<li>
+					<strong class="text-foreground">Read about the games available.</strong>
+					Our <a href="/blog/comegame-skill-games-explained" class="text-primary underline-offset-4 hover:underline">guide to Comegame skill games</a>
+					explains the different game formats, how they work, and which suit different experience levels.
+					Choosing the right format from the start improves your experience significantly.
+				</li>
+				<li>
+					<strong class="text-foreground">Start with practice or free modes.</strong>
+					Before making any deposit or entering paid contests, use the practice modes available in your
+					preferred game types. Build familiarity with mechanics and scoring before real money is involved.
+				</li>
+				<li>
+					<strong class="text-foreground">Review the bonus section carefully.</strong>
+					If you plan to claim a welcome bonus, read the full terms first. Our
+					<a href="/blog/comegame-bonus-guide-india" class="text-primary underline-offset-4 hover:underline">Comegame bonus guide</a>
+					explains every type of offer and the wagering terms that govern them — essential reading
+					before claiming anything.
+				</li>
+				<li>
+					<strong class="text-foreground">Set your deposit and session limits.</strong>
+					Do this before your first deposit. Establish a monthly ceiling and stick to it.
+				</li>
+			</ol>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				For a broader introduction to the platform before diving into specific games, the
+				<a href="/" class="text-primary underline-offset-4 hover:underline">Come Game Guide homepage</a>
+				is a comprehensive starting resource. It covers the full scope of what the platform offers and
+				provides contextual links to every section of the guide.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-primary/30 bg-primary/10 p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Conclusion</h2>
+			<p class="mt-4 text-base leading-7 text-foreground">
+				A well-configured Comegame account — registered with your legal name, fully KYC-verified, secured
+				with two-factor authentication, and linked to a verified payment method — makes every subsequent
+				platform interaction smoother. The setup process takes under 30 minutes when you have your documents
+				ready, and the time investment pays dividends in faster withdrawals, fewer verification delays, and
+				a more secure account over the long term.
+			</p>
+			<p class="mt-4 text-base leading-7 text-foreground">
+				The most important steps are the ones most users skip: complete KYC before you need to withdraw,
+				use a unique strong password, enable 2FA, and set deposit limits before your first top-up. Follow
+				these four steps and your account will be both functional and safe from day one.
+			</p>
+			<p class="mt-4 text-base leading-7 text-foreground">
+				From here, explore the <a href="/blog/comegame-withdrawal-guide" class="text-primary underline-offset-4 hover:underline">withdrawal guide</a>
+				to understand how to cash out, the
+				<a href="/blog/comegame-skill-games-explained" class="text-primary underline-offset-4 hover:underline">skill games guide</a>
+				to understand what you can play, and the
+				<a href="/about" class="text-primary underline-offset-4 hover:underline">about page</a>
+				for more information about Come Game Guide and what we cover.
+			</p>
+		</section>
+
+		<section class="mt-10 max-w-4xl">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Frequently Asked Questions</h2>
+			<div class="mt-6 space-y-4">
+				<details class="rounded-xl border border-border bg-card p-4">
+					<summary class="cursor-pointer font-semibold text-foreground">What documents are needed to verify a Comegame account?</summary>
+					<p class="mt-3 text-sm leading-7 text-muted-foreground">Standard KYC documents for Comegame include a government-issued photo ID (Aadhaar card, PAN card, passport, or voter ID) and a PAN card specifically for tax compliance purposes. Proof of address may also be required.</p>
+				</details>
+				<details class="rounded-xl border border-border bg-card p-4">
+					<summary class="cursor-pointer font-semibold text-foreground">How long does Comegame KYC verification take?</summary>
+					<p class="mt-3 text-sm leading-7 text-muted-foreground">KYC verification on Comegame typically takes a few hours to two business days. Submitting clear, well-lit photographs of documents and ensuring name consistency speeds up the process.</p>
+				</details>
+				<details class="rounded-xl border border-border bg-card p-4">
+					<summary class="cursor-pointer font-semibold text-foreground">Can I use the same mobile number for multiple Comegame accounts?</summary>
+					<p class="mt-3 text-sm leading-7 text-muted-foreground">No. Each mobile number can only be linked to one Comegame account. Creating multiple accounts with different numbers to claim multiple welcome bonuses is against the platform's terms and can result in account suspension.</p>
+				</details>
+				<details class="rounded-xl border border-border bg-card p-4">
+					<summary class="cursor-pointer font-semibold text-foreground">What is two-factor authentication on Comegame?</summary>
+					<p class="mt-3 text-sm leading-7 text-muted-foreground">Two-factor authentication (2FA) adds a second verification step to your login — typically an OTP sent to your registered mobile number. Even if someone knows your password, they cannot access your account without the OTP.</p>
+				</details>
+				<details class="rounded-xl border border-border bg-card p-4">
+					<summary class="cursor-pointer font-semibold text-foreground">What should I do if my Comegame registration OTP is not received?</summary>
+					<p class="mt-3 text-sm leading-7 text-muted-foreground">Wait 60 seconds and use the resend option. Ensure your mobile number is entered correctly and has network signal. If the problem persists, try a different network or contact Comegame support through the official contact page.</p>
+				</details>
+			</div>
+		</section>
+	</article>
+</Layout>

@@ -1,0 +1,549 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { PUBLIC_SITE_URL } from 'astro:env/client';
+
+const seoTitle = 'Comegame Withdrawal Guide: How to Cash Out Winnings Safely in India';
+const seoDescription =
+	'Step-by-step guide to withdrawing winnings on Comegame — UPI withdrawals, KYC requirements, minimum amounts, timelines, common problems, and tax tips for Indian users.';
+const canonicalUrl = `${PUBLIC_SITE_URL}/blog/comegame-withdrawal-guide`;
+const ogImage = `${PUBLIC_SITE_URL}/android-chrome-512x512.png`;
+const keywordsMeta =
+	'comegame withdrawal, come game cashout, comegame UPI withdrawal, comegame withdrawal time india, comegame KYC withdrawal, online gaming withdrawal india, comegame payout guide';
+
+const articleSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BlogPosting',
+	headline: seoTitle,
+	description: seoDescription,
+	url: canonicalUrl,
+	image: ogImage,
+	datePublished: '2026-07-01',
+	dateModified: '2026-07-01',
+	inLanguage: 'en-IN',
+	author: { '@type': 'Organization', name: 'Come Game Guide' },
+	publisher: {
+		'@type': 'Organization',
+		name: 'Come Game Guide',
+		logo: { '@type': 'ImageObject', url: ogImage },
+	},
+	mainEntityOfPage: canonicalUrl,
+};
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: [
+		{
+			'@type': 'Question',
+			name: 'How long does a Comegame withdrawal take?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Most Comegame withdrawals via UPI are processed within a few hours to 24 hours once KYC is complete and the request passes internal verification. Bank transfer withdrawals may take 1–3 working days.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'What is the minimum withdrawal amount on Comegame?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'The minimum withdrawal amount on Comegame is typically ₹100, though this may vary. Check the platform\'s current withdrawal policy in your account settings for the most accurate figure.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Why is my Comegame withdrawal pending?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Common reasons include incomplete KYC verification, unmet bonus wagering requirements, name mismatch between the account and the linked payment method, or the request being queued during high-volume periods.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Is TDS deducted on Comegame withdrawals?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Yes. Under Indian tax law, TDS at 30% is applicable on net winnings from online gaming that exceed specified thresholds. The platform deducts TDS before crediting the net amount to your payment method.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Can I withdraw Comegame bonus money directly?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'No. Bonus credits are not directly withdrawable. You must meet the applicable wagering requirements first, after which the resulting winnings become withdrawable as real money.',
+			},
+		},
+	],
+};
+---
+
+<Layout
+	title={seoTitle}
+	description={seoDescription}
+	keywords={keywordsMeta}
+	canonical={canonicalUrl}
+	ogImage={ogImage}
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+	</Fragment>
+
+	<article class="container mx-auto px-4 py-12 md:py-16">
+		<header class="max-w-4xl">
+			<a href="/blog" class="inline-flex rounded-full border border-border bg-card px-3 py-1 text-xs font-bold uppercase tracking-wide text-muted-foreground hover:text-foreground">
+				Back to Blog
+			</a>
+			<h1 class="mt-4 text-3xl font-black tracking-tight text-foreground md:text-5xl">
+				Comegame Withdrawal Guide: How to Cash Out Winnings Safely in India
+			</h1>
+			<p class="mt-3 text-sm font-semibold text-muted-foreground">Published on July 1, 2026 | Withdrawals &amp; Payments Guide</p>
+			<p class="mt-5 text-base leading-7 text-muted-foreground md:text-lg">
+				Withdrawing winnings should be one of the simplest actions on any gaming platform. In practice, Indian
+				users encounter a range of friction points — pending requests, failed transactions, KYC holds, and
+				confusion about tax deductions — that turn the cashout process into a source of stress. This guide
+				walks through every step of the Comegame withdrawal process, explains why problems occur, and gives
+				practical fixes for the most common issues.
+			</p>
+		</header>
+
+		<div class="mt-8 max-w-5xl overflow-hidden rounded-2xl border border-border bg-card/50 p-5">
+			<div class="grid items-center gap-4 md:grid-cols-[auto_1fr]">
+				<img src="/logo.svg" alt="Comegame withdrawal guide India" class="h-16 w-16 rounded-xl border border-border bg-background p-2" loading="lazy" decoding="async" />
+				<p class="text-sm leading-7 text-muted-foreground">
+					Before requesting a withdrawal, ensure your KYC is fully verified and your linked payment method
+					matches the name on your account. Read our
+					<a href="/blog/comegame-account-setup-guide" class="text-primary underline-offset-4 hover:underline">account setup and KYC guide</a>
+					if you have not completed verification yet. Incomplete verification is the leading cause of delayed withdrawals.
+				</p>
+			</div>
+		</div>
+
+		<section class="mt-10 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Understanding the Comegame Wallet Structure</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Before you request a withdrawal, you need to understand how your Comegame wallet is structured. Most
+				Indian gaming platforms, including Comegame, divide your balance into at least two distinct buckets:
+				your real-money balance (also called cash balance or withdrawable balance) and your bonus balance.
+				These are not interchangeable.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Your real-money balance consists of funds you deposited directly plus any winnings that have been
+				cleared for withdrawal (that is, winnings derived from real-money play or from bonus play after the
+				wagering requirement has been met). Only this balance is withdrawable. Your bonus balance holds credits
+				from welcome offers, referral rewards, or promotions — these cannot be withdrawn directly and must be
+				wagered according to the applicable terms before converting to withdrawable funds.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Some platforms further subdivide the real-money balance into "deposit balance" and "winnings balance,"
+				with the deposit portion subject to a minimum withdrawal requirement or a brief hold period after a
+				fresh deposit. Understanding these distinctions prevents confusion when you see your total balance is
+				₹1,500 but the withdrawal screen only shows ₹800 as available. For a broader overview of how Comegame's
+				finances work, see our
+				<a href="/real-money-come-games" class="text-primary underline-offset-4 hover:underline">real money Come Games guide</a>
+				which covers deposits, wallet management, and the flow of funds from deposit to winnings.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">KYC Requirements Before You Can Withdraw</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				KYC — Know Your Customer — is the identity verification process required by Indian law for platforms
+				handling real money. On Comegame, you must complete KYC before your first withdrawal is processed,
+				and in many cases, before you can withdraw any amount above a basic threshold. Skipping KYC during
+				registration and only attempting it when you want to withdraw is one of the most common mistakes users
+				make, because it causes delays precisely when you want the process to be fast.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				The standard KYC documents required on Indian gaming platforms are: a government-issued photo ID
+				(Aadhaar card, PAN card, passport, or voter ID) and proof of address. PAN card specifically is often
+				mandatory on gaming platforms because it is required for TDS compliance. Some platforms also require
+				a bank account statement or cancelled cheque for payment method verification.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				After submission, KYC verification typically takes between a few hours and two business days. During
+				this period, your withdrawal requests may be queued rather than immediately processed. Our
+				<a href="/blog/comegame-account-setup-guide" class="text-primary underline-offset-4 hover:underline">Comegame account setup guide</a>
+				covers the full KYC process in detail — what documents to prepare, how to photograph them correctly,
+				and what to do if verification is rejected.
+			</p>
+			<h3 class="mt-6 text-xl font-bold text-foreground">Why Name Matching Matters</h3>
+			<p class="mt-3 text-base leading-7 text-muted-foreground">
+				One of the most common KYC rejection reasons is a name mismatch. The name on your Comegame account
+				must exactly match the name on your KYC document AND the name on your linked UPI or bank account.
+				If you registered with a nickname, an abbreviated name, or made a typo, the verification will fail
+				or your withdrawal will be held for manual review. Correct this in your profile settings before
+				submitting KYC documents.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Step-by-Step: How to Withdraw on Comegame</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Once your KYC is approved and you have a withdrawable balance, the process itself is straightforward.
+				Here is a complete walkthrough.
+			</p>
+			<ol class="mt-5 list-decimal space-y-5 pl-6 text-base leading-7 text-muted-foreground">
+				<li>
+					<strong class="text-foreground">Open the app and navigate to your Wallet or Account section.</strong>
+					Look for a "Withdraw" or "Cash Out" button. It is usually prominently placed on the wallet screen.
+				</li>
+				<li>
+					<strong class="text-foreground">Verify your available withdrawable balance.</strong>
+					Confirm the amount shown matches your expectation. If the available amount is lower than your
+					total balance, the difference is likely held in bonus credits or is subject to a pending
+					wagering requirement.
+				</li>
+				<li>
+					<strong class="text-foreground">Select your withdrawal method.</strong>
+					For most Indian users, UPI is the fastest and most convenient option. Other methods may include
+					IMPS bank transfer or net banking. UPI typically processes faster than a direct bank transfer.
+				</li>
+				<li>
+					<strong class="text-foreground">Enter or confirm your UPI ID or bank account details.</strong>
+					If you have already linked a payment method in your profile settings, it may auto-populate. Verify
+					the details are correct before proceeding. A withdrawal sent to the wrong account cannot be reversed
+					easily.
+				</li>
+				<li>
+					<strong class="text-foreground">Enter the withdrawal amount.</strong>
+					Ensure the amount is above the platform's minimum withdrawal threshold (typically ₹100). There
+					may also be a daily or weekly maximum withdrawal limit — check the platform's current policy if
+					you are withdrawing a large amount.
+				</li>
+				<li>
+					<strong class="text-foreground">Confirm with OTP or PIN.</strong>
+					Most platforms require a one-time password sent to your registered mobile number to authorise
+					the withdrawal. Enter it accurately. Do not share this OTP with anyone — no legitimate platform
+					support agent will ask for it.
+				</li>
+				<li>
+					<strong class="text-foreground">Note the reference number and wait for processing.</strong>
+					After confirmation, a reference number is generated. Save this. If your withdrawal does not
+					arrive within the stated timeline, use this reference number when contacting support.
+				</li>
+			</ol>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">UPI Withdrawals: Speed, Limits, and Best Practices</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				UPI (Unified Payments Interface) is the dominant payment method for Indian gaming platform withdrawals
+				for good reason. Transactions are near-instant when the system is running smoothly, the infrastructure
+				is widely available, and most users already have a UPI-linked bank account set up via apps like GPay,
+				PhonePe, or Paytm. Comegame supports UPI withdrawals, making it the recommended method for most users.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				A few practical notes about UPI withdrawals: the UPI ID you use for withdrawal must be linked to a
+				bank account registered in your name. Third-party UPI IDs — a friend's, a family member's — will
+				typically be rejected during verification because the account holder name will not match your KYC
+				details. Ensure you enter the full UPI VPA (Virtual Payment Address) correctly; even one wrong
+				character will cause the transaction to fail.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				UPI has a per-transaction limit of ₹1 lakh set by NPCI (National Payments Corporation of India),
+				though individual banks may apply lower limits. If you are withdrawing a large amount, check whether
+				your bank's UPI limit accommodates it. For amounts above your UPI limit, a bank transfer via NEFT
+				or IMPS may be more appropriate. The platform will display available methods based on your withdrawal
+				amount.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Withdrawal Timelines: What to Expect</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Withdrawal processing has two phases: the platform's internal processing time, and the payment network's
+				transfer time. The internal processing is where most variation occurs.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				For fully verified accounts with straightforward requests, Comegame typically processes withdrawal
+				requests within a few hours to 24 hours. During this phase, the platform's system verifies that
+				the request meets all conditions: withdrawable balance is sufficient, no active bonus wagering
+				requirement blocks the funds, KYC is complete, and the payment details match. If all conditions
+				are met automatically, the request moves to the payment stage quickly.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				If the platform's system flags a request for manual review — typically for large amounts, first-time
+				withdrawals, or security triggers — the timeline extends. Manual review can add one to three business
+				days. After the platform releases the funds, UPI transfers typically arrive within minutes. NEFT
+				transfers arrive within 2 hours during banking hours (cut-off batches apply); IMPS is near-instant.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				If your withdrawal has not arrived within 3 business days and you have a reference number, contact
+				Comegame's support team via the
+				<a href="/contact" class="text-primary underline-offset-4 hover:underline">contact page</a>.
+				Provide the reference number, withdrawal amount, and date of request. This gives the support team
+				everything they need to investigate without a back-and-forth delay.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Common Withdrawal Problems and Their Fixes</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Understanding why withdrawals fail is more useful than simply knowing what to do when they do. Here
+				are the most frequently encountered problems and the specific actions that resolve them.
+			</p>
+			<div class="mt-5 space-y-6">
+				<div>
+					<h3 class="text-xl font-bold text-foreground">Problem: Withdrawal button greyed out or unavailable</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						This usually indicates that your KYC is incomplete, your account has an active wagering
+						requirement that covers your current balance, or you have not yet made a deposit of the
+						minimum required amount. Check each of these conditions in your account settings. If KYC
+						is pending, complete and submit it. For wagering requirements, check the bonus section to
+						see how much playthrough remains.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-foreground">Problem: Withdrawal rejected with "name mismatch" error</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						Your account name, KYC document name, and linked UPI or bank account name must all match
+						exactly. Update your profile to correct any discrepancy. If the mismatch is in your KYC
+						document itself (for example, an Aadhaar with an old name), update the document first or
+						use an alternative document that matches your current legal name.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-foreground">Problem: Withdrawal stuck in "Processing" for more than 48 hours</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						This often indicates a manual review queue. Contact support with your reference number.
+						If this is your first withdrawal, it is normal for the platform to apply additional
+						verification steps. Subsequent withdrawals from the same account typically process faster.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-foreground">Problem: Amount received is less than expected</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						The difference is almost always TDS. If your net winnings exceed the applicable threshold,
+						the platform deducts TDS at 30% before transferring the remainder. Your account dashboard
+						should show a breakdown of the gross amount, TDS deducted, and net amount transferred.
+						Retain this for your income tax return. For more on TDS, see the tax section later in this guide.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-foreground">Problem: UPI transfer failed but amount was deducted from Comegame wallet</h3>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						In rare cases, the payment gateway processes the deduction from the platform wallet but the
+						UPI transfer fails at the bank end. In such scenarios, the amount is typically auto-reversed
+						to your Comegame wallet within 24–72 hours. If it does not appear, raise a dispute with
+						your UPI provider (Google Pay, PhonePe, etc.) and also contact Comegame support simultaneously.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Bonus Wagering and Its Effect on Withdrawals</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				If you have claimed any bonus on Comegame, an active wagering requirement may restrict which portion
+				of your balance you can withdraw. This is one of the most misunderstood aspects of gaming platform
+				finances. Many users see a healthy balance and attempt a withdrawal, only to find the system blocks
+				it because a bonus wagering condition is still active.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				The rule is: funds subject to an active wagering requirement are not withdrawable until that requirement
+				is either met or the bonus is forfeited. If you want to withdraw immediately without meeting the
+				wagering condition, most platforms allow you to forfeit the bonus — but this means the bonus credits
+				disappear and any winnings derived specifically from bonus play may also be removed.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Before accepting any bonus, read the terms carefully. Our
+				<a href="/blog/comegame-bonus-guide-india" class="text-primary underline-offset-4 hover:underline">Comegame bonus guide for India</a>
+				explains wagering requirements in full detail, including how to calculate whether a bonus is
+				realistic to clear given your typical play volume. Understanding this before claiming prevents
+				the situation where a bonus blocks your legitimate winnings from being withdrawn.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Tax Implications: TDS on Gaming Winnings in India</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				India's tax framework for online gaming has become significantly clearer in recent years. Under the
+				current provisions of the Income Tax Act (as amended), online gaming platforms are required to deduct
+				TDS (Tax Deducted at Source) at 30% on net winnings at the time of withdrawal. The threshold and
+				calculation method have evolved — as of recent amendments, TDS applies to net winnings without any
+				basic exemption threshold for online games specifically designated under the tax framework.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Net winnings are calculated as: total amount withdrawn minus total amount deposited (in simplified
+				terms). The platform tracks this on a financial-year basis. When you withdraw, the platform's system
+				calculates the applicable TDS, deducts it, and transfers the net amount to your account. You will
+				receive a Form 26AS or TDS certificate reflecting the deducted amount, which you use when filing
+				your annual income tax return.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				There are a few important nuances. First, TDS is not the same as your final tax liability — it is
+				a prepayment. If you fall in a lower income tax bracket or have losses from other sources, you may
+				be entitled to a refund on the TDS amount when you file your return. Second, gaming winnings are
+				taxed at a flat 30% rate regardless of your income slab — unlike salary income where different slabs
+				apply. Third, you cannot set off gaming losses against gaming winnings for tax purposes under current
+				Indian tax law.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				For specific and personalised tax advice, consult a qualified chartered accountant who is familiar
+				with online gaming taxation. The
+				<a href="/faq" class="text-primary underline-offset-4 hover:underline">Comegame FAQ section</a>
+				also addresses common tax questions in a general informational format. Do not rely solely on platform
+				estimates for your tax obligations — verify with an official source or tax professional.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Responsible Money Management for Gaming Withdrawals</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				The act of withdrawing winnings is not just a technical process — it is also a financial decision.
+				How you handle winnings determines whether gaming remains a sustainable entertainment activity or
+				becomes a source of financial instability. Here are the principles that experienced, responsible
+				players follow.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				First, set a "withdraw threshold" before you start playing. Decide in advance: if my balance reaches
+				₹X, I will withdraw ₹Y. This prevents the common pattern of continually reinvesting winnings until
+				you have lost everything. Treat a portion of winnings as actual earnings — withdraw and bank them,
+				rather than keeping all funds in the gaming wallet.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Second, never play with withdrawn funds in the same session. If you have decided to withdraw and
+				lock in a win, do not second-guess the decision when the next game starts. The urge to "let it ride"
+				is a well-documented cognitive bias — resisting it is a skill that separates disciplined players from
+				those who watch winnings evaporate.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Third, keep a simple monthly log of deposits and withdrawals. At the end of each month, calculate
+				your net position. This is both useful for tax purposes (as it tracks your net winnings for TDS
+				calculations) and for honest self-assessment of whether gaming is profitable or costing you money.
+				Most players overestimate their wins and underestimate their losses when relying purely on memory.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				The broader framework for responsible play — including deposit limits, time limits, and self-exclusion
+				options — is covered in our
+				<a href="/responsible-gaming" class="text-primary underline-offset-4 hover:underline">responsible gaming guide</a>.
+				This should be a mandatory read before you make any real-money deposit on Comegame or any other platform.
+				Gaming is entertainment, and withdrawals are a sign that you have played responsibly when they reflect
+				genuine net gains rather than recouped losses.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Security During the Withdrawal Process</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Withdrawal requests are a sensitive moment from a security standpoint because they involve real money
+				in transit. This makes gaming accounts a target for social engineering attacks. Here is what to watch
+				for and how to protect yourself.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Fraudulent "support agents" frequently contact users — via WhatsApp, social media, or email — claiming
+				to be from Comegame support and offering to "expedite" pending withdrawals. They ask for your OTP,
+				PIN, password, or account access. Legitimate platform support will never ask for these. No support
+				interaction requires you to share your OTP. If anyone asks for it, it is a scam — disconnect and
+				report it. Use only the official support channel linked from the
+				<a href="/contact" class="text-primary underline-offset-4 hover:underline">contact page</a>.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Also ensure your Comegame account password is not reused from another service. If a different platform
+				you use suffers a data breach and your credentials are exposed, attackers may attempt to use those
+				same credentials on your Comegame account. Enable two-factor authentication if the platform offers
+				it — our <a href="/blog/comegame-account-setup-guide" class="text-primary underline-offset-4 hover:underline">account setup and security guide</a>
+				covers all security settings in detail.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Minimum and Maximum Withdrawal Limits</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Comegame's minimum withdrawal amount is typically around ₹100, though this is subject to change —
+				always verify in your account settings before planning a withdrawal. The minimum exists because
+				processing each transaction has a cost, and below a certain amount the processing fee would exceed
+				the transfer value.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Maximum withdrawal limits are less commonly discussed but equally important. Platforms typically
+				apply a daily maximum (for example, ₹25,000 per day) or a monthly maximum. For large withdrawals
+				above the daily limit, you may need to spread the request across multiple days or contact support
+				to request a limit increase (which usually requires additional verification). Planning ahead for
+				large withdrawals prevents unexpected hold-ups.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				If you want to understand how Comegame's payment options and limits compare to alternative platforms,
+				our <a href="/blog/comegame-vs-other-online-gaming-platforms" class="text-primary underline-offset-4 hover:underline">Comegame vs other online gaming platforms guide</a>
+				includes a comparison of payment infrastructure and payout flexibility. This is particularly
+				relevant if you use multiple gaming platforms and want to consolidate to the one with the most
+				convenient withdrawal terms for your usage level.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-border bg-card p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">What Happens If You Close Your Account with a Balance</h2>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				If you decide to stop using Comegame, always withdraw your available balance before closing or
+				deactivating your account. Once an account is closed, recovering the funds requires a formal request
+				process that can take weeks and require re-verification. The responsible and practical approach is
+				to withdraw first, then request account closure through the platform's official process.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				Bonus credits that were not cleared through wagering will typically be forfeited upon account closure —
+				this is standard across all gaming platforms. Only your real-money withdrawable balance should be
+				expected to be returned. If you are considering whether to close your account due to concerns about
+				excessive gaming, our
+				<a href="/responsible-gaming" class="text-primary underline-offset-4 hover:underline">responsible gaming resources page</a>
+				discusses self-exclusion options that let you take a break without permanently closing your account.
+			</p>
+			<p class="mt-4 text-base leading-7 text-muted-foreground">
+				To explore what the platform offers beyond withdrawals and finances, visit our
+				<a href="/come-games" class="text-primary underline-offset-4 hover:underline">Come Games overview page</a>
+				for the full picture of available game formats, and our
+				<a href="/" class="text-primary underline-offset-4 hover:underline">Come Game Guide homepage</a>
+				for the most up-to-date information about the platform.
+			</p>
+		</section>
+
+		<section class="mt-8 max-w-4xl rounded-xl border border-primary/30 bg-primary/10 p-6">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Conclusion</h2>
+			<p class="mt-4 text-base leading-7 text-foreground">
+				Withdrawing your winnings on Comegame is a straightforward process when your account is fully set up —
+				KYC verified, payment method linked and name-matched, no active wagering requirements blocking funds.
+				Most problems users encounter are preventable by completing verification before they are needed, not
+				when a withdrawal is already pending.
+			</p>
+			<p class="mt-4 text-base leading-7 text-foreground">
+				The key points to remember: UPI is the fastest withdrawal method in India; TDS at 30% applies to net
+				winnings and will reduce the amount you receive; bonus credits cannot be withdrawn directly; and
+				security during the withdrawal process requires vigilance against fake support contacts. Follow
+				these principles and your Comegame cashout experience will be reliable and predictable.
+			</p>
+			<p class="mt-4 text-base leading-7 text-foreground">
+				For related reading, check the <a href="/blog/comegame-bonus-guide-india" class="text-primary underline-offset-4 hover:underline">bonus guide</a>
+				to understand how wagering conditions affect withdrawable funds, and the
+				<a href="/blog/comegame-account-setup-guide" class="text-primary underline-offset-4 hover:underline">account setup guide</a>
+				to ensure your profile is fully prepared. Always manage your gaming finances with the same discipline
+				you would apply to any other discretionary spending.
+			</p>
+		</section>
+
+		<section class="mt-10 max-w-4xl">
+			<h2 class="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">Frequently Asked Questions</h2>
+			<div class="mt-6 space-y-4">
+				<details class="rounded-xl border border-border bg-card p-4">
+					<summary class="cursor-pointer font-semibold text-foreground">How long does a Comegame withdrawal take?</summary>
+					<p class="mt-3 text-sm leading-7 text-muted-foreground">Most Comegame withdrawals via UPI are processed within a few hours to 24 hours once KYC is complete and the request passes internal verification. Bank transfer withdrawals may take 1–3 working days.</p>
+				</details>
+				<details class="rounded-xl border border-border bg-card p-4">
+					<summary class="cursor-pointer font-semibold text-foreground">What is the minimum withdrawal amount on Comegame?</summary>
+					<p class="mt-3 text-sm leading-7 text-muted-foreground">The minimum withdrawal amount on Comegame is typically ₹100, though this may vary. Check the platform's current withdrawal policy in your account settings for the most accurate figure.</p>
+				</details>
+				<details class="rounded-xl border border-border bg-card p-4">
+					<summary class="cursor-pointer font-semibold text-foreground">Why is my Comegame withdrawal pending?</summary>
+					<p class="mt-3 text-sm leading-7 text-muted-foreground">Common reasons include incomplete KYC verification, unmet bonus wagering requirements, name mismatch between the account and the linked payment method, or the request being queued during high-volume periods.</p>
+				</details>
+				<details class="rounded-xl border border-border bg-card p-4">
+					<summary class="cursor-pointer font-semibold text-foreground">Is TDS deducted on Comegame withdrawals?</summary>
+					<p class="mt-3 text-sm leading-7 text-muted-foreground">Yes. Under Indian tax law, TDS at 30% is applicable on net winnings from online gaming that exceed specified thresholds. The platform deducts TDS before crediting the net amount to your payment method.</p>
+				</details>
+				<details class="rounded-xl border border-border bg-card p-4">
+					<summary class="cursor-pointer font-semibold text-foreground">Can I withdraw Comegame bonus money directly?</summary>
+					<p class="mt-3 text-sm leading-7 text-muted-foreground">No. Bonus credits are not directly withdrawable. You must meet the applicable wagering requirements first, after which the resulting winnings become withdrawable as real money.</p>
+				</details>
+			</div>
+		</section>
+	</article>
+</Layout>

@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import contentData from '../assets/content.json';
+import { PUBLIC_SITE_URL, PUBLIC_AFFILIATE_URL } from 'astro:env/client';
 
 const seoTitle = 'Come Game & Com Game Guide India: Download, Bonus, Safety';
 const seoDescription =
 	'Come Game Guide helps Indian users searching come game, com game, comegame, and comgames with app download steps, bonuses, payments, legality, and responsible gaming reminders.';
-const canonicalUrl = 'https://www.comegameapp.com/';
-const ogImage = 'https://www.comegameapp.com/android-chrome-512x512.png';
-const affiliateUrl = 'https://web-in.comegamehub.com/en/affiliate-invited?c=5DAGYXA3&s=3';
+const canonicalUrl = `${PUBLIC_SITE_URL}/`;
+const ogImage = `${PUBLIC_SITE_URL}/android-chrome-512x512.png`;
+const affiliateUrl = PUBLIC_AFFILIATE_URL;
 const shareText = 'Come Game & Com Game App Guide for India: Download, Bonus and Safety';
 const encodedShareText = encodeURIComponent(shareText);
 const encodedShareUrl = encodeURIComponent(canonicalUrl);
@@ -163,7 +164,7 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'Come Game Guide',
   url: canonicalUrl,
-	logo: 'https://www.comegameapp.com/android-chrome-512x512.png',
+	logo: `${PUBLIC_SITE_URL}/android-chrome-512x512.png`,
   sameAs: [],
   description:
     'Come Game Guide is an informational website for Indian users with app guides, bonus explainers, payment education, and responsible gaming resources.',

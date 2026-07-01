@@ -1,15 +1,14 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import contentData from '../../assets/content.json';
+import { PUBLIC_SITE_URL } from 'astro:env/client';
 
 const seoTitle = 'Come Game Blog: Guides, Tutorials, and Beginner Tips';
 const seoDescription =
 	'Read the latest Come Game blog posts with beginner-friendly tutorials, gameplay basics, and platform feature explainers.';
-const canonicalUrl = 'https://www.comegameapp.com/blog';
-const ogImage = 'https://www.comegameapp.com/android-chrome-512x512.png';
-const keywordsMeta = [...contentData.keywords, 'comegame blog', 'comegame tutorial', 'how comegame works']
-	.slice(0, 80)
-	.join(', ');
+const canonicalUrl = `${PUBLIC_SITE_URL}/blog`;
+const ogImage = `${PUBLIC_SITE_URL}/android-chrome-512x512.png`;
+const keywordsMeta =
+	'comegame blog, comegame tutorial, how comegame works, comegame guides, comegame tips, online gaming india, comegame features, comegame skill games, comegame withdrawal, comegame bonus';
 
 const posts = [
 	{
@@ -56,6 +55,42 @@ const posts = [
 		published: 'March 24, 2026',
 		category: 'Beginner Guide',
 		readTime: '9 min read',
+	},
+	{
+		title: 'Comegame Bonus Guide India: Welcome Offers & Wagering Explained',
+		description:
+			'A complete guide to Comegame bonuses in India — welcome offers, referral rewards, deposit matches, wagering requirements, and how to evaluate every promotion.',
+		url: '/blog/comegame-bonus-guide-india',
+		published: 'July 1, 2026',
+		category: 'Bonus Guide',
+		readTime: '14 min read',
+	},
+	{
+		title: 'Comegame Withdrawal Guide: How to Cash Out Safely in India',
+		description:
+			'Step-by-step guide to withdrawing winnings on Comegame — UPI cashouts, KYC requirements, timelines, common problems, and TDS for Indian users.',
+		url: '/blog/comegame-withdrawal-guide',
+		published: 'July 1, 2026',
+		category: 'Payments Guide',
+		readTime: '13 min read',
+	},
+	{
+		title: 'Comegame Account Setup Guide: Registration, KYC & Security',
+		description:
+			'Complete Comegame account setup guide — step-by-step registration, KYC document requirements, 2FA security, UPI linking, and common error fixes for Indian users.',
+		url: '/blog/comegame-account-setup-guide',
+		published: 'July 1, 2026',
+		category: 'Account Guide',
+		readTime: '15 min read',
+	},
+	{
+		title: 'Comegame Skill Games Explained: Types, Rules & Winning Tips',
+		description:
+			'Everything you need to know about skill games on Comegame — game types, Indian legal framework, how scoring works, and practical strategies to win more often.',
+		url: '/blog/comegame-skill-games-explained',
+		published: 'July 1, 2026',
+		category: 'Skill Games Guide',
+		readTime: '16 min read',
 	},
 ];
 ---

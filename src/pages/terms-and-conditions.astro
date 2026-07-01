@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import contentData from '../assets/content.json';
+import { PUBLIC_SITE_URL } from 'astro:env/client';
 
 const keywordsMeta = contentData.keywords.slice(0, 80).join(', ');
 
@@ -9,11 +10,11 @@ const webPageSchema = {
   "@type": "WebPage",
   "name": "Terms and Conditions – Come Game Guide",
   "description": "Terms and conditions governing the use of the Come Game Guide website and its informational content.",
-  "url": "https://www.comegameapp.com/terms-and-conditions",
+  "url": `${PUBLIC_SITE_URL}/terms-and-conditions`,
   "publisher": {
     "@type": "Organization",
     "name": "Come Game Guide",
-    "url": "https://www.comegameapp.com"
+    "url": PUBLIC_SITE_URL
   }
 };
 ---
@@ -22,8 +23,8 @@ const webPageSchema = {
   title="Terms and Conditions – Come Game Guide"
   description="Terms and conditions governing the use of the Come Game Guide website and its informational content."
   keywords={keywordsMeta}
-  canonical="https://www.comegameapp.com/terms-and-conditions"
-  ogImage="https://www.comegameapp.com/android-chrome-512x512.png"
+  canonical={`${PUBLIC_SITE_URL}/terms-and-conditions`}
+  ogImage={`${PUBLIC_SITE_URL}/android-chrome-512x512.png`}
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)}></script>

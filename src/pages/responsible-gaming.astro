@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import contentData from '../assets/content.json';
+import { PUBLIC_SITE_URL } from 'astro:env/client';
 
 const keywordsMeta = contentData.keywords.slice(0, 80).join(', ');
 
@@ -9,11 +10,11 @@ const webPageSchema = {
   "@type": "WebPage",
   "name": "Responsible Gaming – Come Game Guide",
   "description": "Guidelines and information about responsible gaming practices and understanding risks associated with real-money gaming.",
-  "url": "https://www.comegameapp.com/responsible-gaming",
+  "url": `${PUBLIC_SITE_URL}/responsible-gaming`,
   "publisher": {
     "@type": "Organization",
     "name": "Come Game Guide",
-    "url": "https://www.comegameapp.com"
+    "url": PUBLIC_SITE_URL
   }
 };
 ---
@@ -22,8 +23,8 @@ const webPageSchema = {
   title="Responsible Gaming: Safe Play Guidelines | Come Game Guide"
   description="Learn responsible gaming practices, understand risks of real-money gaming, and find guidance for safe and controlled gameplay."
   keywords={keywordsMeta}
-  canonical="https://www.comegameapp.com/responsible-gaming"
-  ogImage="https://www.comegameapp.com/android-chrome-512x512.png"
+  canonical={`${PUBLIC_SITE_URL}/responsible-gaming`}
+  ogImage={`${PUBLIC_SITE_URL}/android-chrome-512x512.png`}
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)}></script>

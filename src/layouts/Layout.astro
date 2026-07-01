@@ -1,6 +1,7 @@
 ---
 import Header from '../components/const/header.astro';
 import '../styles/global.css';
+import { PUBLIC_SITE_URL } from 'astro:env/client';
 
 interface Props {
   title?: string;
@@ -14,12 +15,12 @@ const {
 	title = 'Come Game Guide: App Download, Bonus and Safety',
 	description = 'Come Game Guide is an informational site for Indian users covering app download steps, bonuses, payment basics, risks, and responsible gaming tips.',
   keywords = '',
-  canonical = 'https://www.comegameapp.com/',
-	ogImage = 'https://www.comegameapp.com/android-chrome-512x512.png',
+  canonical = `${PUBLIC_SITE_URL}/`,
+	ogImage = `${PUBLIC_SITE_URL}/android-chrome-512x512.png`,
 } = Astro.props as Props;
 
 const siteName = 'Come Game Guide';
-const primaryDomain = 'https://www.comegameapp.com';
+const primaryDomain = PUBLIC_SITE_URL;
 const canonicalUrl = new URL(canonical, primaryDomain)
 	.toString()
 	.replace(/^https:\/\/comegameapp\.com/, primaryDomain);
@@ -29,7 +30,7 @@ const organizationSchema = {
 	'@type': 'Organization',
 	name: siteName,
 	url: primaryDomain,
-	logo: 'https://www.comegameapp.com/android-chrome-512x512.png',
+	logo: `${PUBLIC_SITE_URL}/android-chrome-512x512.png`,
 	email: 'contact@comegameapp.com',
 	description:
 		'Independent informational website for Indian users covering Come Game app download, safety, payments, and responsible gaming guidance.',

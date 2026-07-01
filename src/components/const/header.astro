@@ -1,8 +1,11 @@
 ---
 import { header } from "../../assets/content/header.json";
+import { PUBLIC_AFFILIATE_URL } from "astro:env/client";
 
 const { logo, navigation, cta_buttons } = header;
 const currentPath = Astro.url.pathname;
+// Override the CTA URL from environment variable
+const ctaUrl = PUBLIC_AFFILIATE_URL;
 
 const normalizePath = (path: string) => {
   const clean = path.replace(/\/+$/, "");
@@ -101,7 +104,7 @@ const getNavAriaLabel = (name: string) =>
         {
           cta_buttons?.[0] && (
             <a
-              href={cta_buttons[0].url}
+              href={ctaUrl}
               target="_blank"
               rel="nofollow sponsored noopener"
               aria-label={`${cta_buttons[0].text} - open official app link`}

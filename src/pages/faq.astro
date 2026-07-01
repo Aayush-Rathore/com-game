@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import contentData from '../assets/content.json';
+import { PUBLIC_SITE_URL } from 'astro:env/client';
 
 const seoTitle = 'Come Game FAQ - Common Questions About Come Games App';
 const seoDescription =
   'Frequently asked questions about the Come Game App including download, safety, legality, real money play and responsible gaming.';
-const canonicalUrl = 'https://www.comegameapp.com/faq';
-const ogImage = 'https://www.comegameapp.com/android-chrome-512x512.png';
+const canonicalUrl = `${PUBLIC_SITE_URL}/faq`;
+const ogImage = `${PUBLIC_SITE_URL}/android-chrome-512x512.png`;
 const keywordsMeta = contentData.keywords.slice(0, 80).join(', ');
 
 const faqSchema = {

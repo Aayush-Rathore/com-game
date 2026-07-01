@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import contentData from '../assets/content.json';
+import { PUBLIC_SITE_URL } from 'astro:env/client';
 
 const seoTitle = 'Come Games - Complete Guide to Come Game App in India (2026)';
 const seoDescription =
   'Learn what Come Games is, how the Come Game app works, available games, real money play, safety, and responsible gaming for Indian users.';
-const canonicalUrl = 'https://www.comegameapp.com/come-games';
-const ogImage = 'https://www.comegameapp.com/android-chrome-512x512.png';
+const canonicalUrl = `${PUBLIC_SITE_URL}/come-games`;
+const ogImage = `${PUBLIC_SITE_URL}/android-chrome-512x512.png`;
 const keywordsMeta = contentData.keywords.slice(0, 80).join(', ');
 
 const articleSchema = {
@@ -25,7 +26,7 @@ const articleSchema = {
     name: 'Come Game Guide',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://www.comegameapp.com/apple-touch-icon.png',
+      url: `${PUBLIC_SITE_URL}/apple-touch-icon.png`,
     },
   },
   datePublished: '2026-01-01',
