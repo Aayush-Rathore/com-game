@@ -1,4 +1,12 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "framework": null,
+  "env": {
+    "PUBLIC_SITE_URL": "https://www.comegameapp.com",
+    "PUBLIC_AFFILIATE_URL": "https://web-in.comegamehub.com/en/affiliate-invited?c=5DAGYXA3&s=3"
+  },
   "redirects": [
     {
       "source": "/:path*",
@@ -10,6 +18,47 @@
       ],
       "destination": "https://www.comegameapp.com/:path*",
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/google8abe17566d8838dd.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    },
+    {
+      "source": "/_astro/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ]
 }
