@@ -4,22 +4,10 @@
   "installCommand": "npm install",
   "framework": null,
   "env": {
-    "PUBLIC_SITE_URL": "https://www.comegameapp.com",
+    "PUBLIC_SITE_URL": "https://com-game.vercel.app",
     "PUBLIC_AFFILIATE_URL": "https://web-in.comegamehub.com/en/affiliate-invited?c=5DAGYXA3&s=3"
   },
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "comegameapp.com"
-        }
-      ],
-      "destination": "https://www.comegameapp.com/:path*",
-      "permanent": true
-    }
-  ],
+  "redirects": [],
   "headers": [
     {
       "source": "/(.*)",
